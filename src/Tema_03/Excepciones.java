@@ -1,5 +1,6 @@
 package Tema_03;
 
+import static Clases.Utilidades.continuar;
 import java.util.Scanner;
 
 /**
@@ -13,8 +14,7 @@ public class Excepciones {
         String menu;
         do {            
             Scanner teclaStr = new Scanner(System.in);
-            System.out.println("""                          
-                               
+            System.out.println("""                        
                                
                                *****************************************************************************
                                *                                EXCEPCIONES                                *
@@ -44,6 +44,13 @@ public class Excepciones {
                                *   printStackTrace()  -> IMPRIME toString() + ERROR DE LA PILA             *
                                *   getStackTrace()    -> DEVUELVE UN ARRAY CON LOS ELEMENTOS DE LA PILA    *
                                *   fillInstackTrace() -> RELLENA LA PILA DEL OBJETO Throwable              *
+                               *****************************************************************************                                                      
+                               
+                               """);
+            continuar();
+            
+            System.out.println("""                       
+                                                                                   
                                *****************************************************************************
                                *   FORMAS DE TRATAR UNA EXCEPCIÓN:                                         *
                                *   1º- AÑADIR LA EXCEPCIÓN A LA DEFINICIÓN DEL MÉTODO -> PASA A OTRO NIVEL.*
@@ -76,6 +83,12 @@ public class Excepciones {
                                *   UN try    -->  PUEDE TENER VARIOS catch  -->  MULTICATCH                *
                                *   UN catch  -->  TIENE QUE TENER UN try OBLIGATORIAMENTE                  *
                                *****************************************************************************
+                                                       
+                               """);
+            continuar();
+            
+            System.out.println("""                          
+                               
                                *****************************************************************************
                                *                       EXCEPCIONES PERSONALIZADAS                          *
                                *****************************************************************************
@@ -112,8 +125,7 @@ public class Excepciones {
                                *                                                                           *
                                *****************************************************************************
                                *  0. ATRÁS.                                                                *
-                               *****************************************************************************
-                                                              
+                               *****************************************************************************                                                              
                                
                                """);
             System.out.print("Seleccione una opción: ");

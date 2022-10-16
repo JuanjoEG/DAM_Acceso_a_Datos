@@ -24,7 +24,7 @@ public class Main {
         *                                                            *
         *  1. INTRODUCCIÓN AL MANEJO DE FICHEROS.                    *
         *  2. FLUJOS.                                                *
-        *  3.                                                        *
+        *  3. TRABAJOS CON FICHEROS XML                              *
         *  4.                                                        *
         *  5.                                                        *
         *  6.                                                        *
@@ -49,6 +49,7 @@ public class Main {
                 switch (menu) {
                     case "1" -> Tema_01.T_01.main(args);
                     case "2" -> Tema_02.T_02.main(args);
+                    case "3" -> Tema_03.T_03.main(args);
                     
                     case "0" -> {}
                     default -> System.out.println("\n  ¡¡¡ LA OPCIÓN NO ES CORRECTA !!!");
