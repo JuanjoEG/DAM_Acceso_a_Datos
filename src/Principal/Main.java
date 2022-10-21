@@ -24,8 +24,8 @@ public class Main {
         *                                                            *
         *  1. INTRODUCCIÓN AL MANEJO DE FICHEROS.                    *
         *  2. FLUJOS.                                                *
-        *  3. TRABAJOS CON FICHEROS XML                              *
-        *  4.                                                        *
+        *  3. TRABAJOS CON FICHEROS XML.                             *
+        *  4. MANEJO DE CONECTORES I.                                *
         *  5.                                                        *
         *  6.                                                        *
         *  7.                                                        *
@@ -50,6 +50,7 @@ public class Main {
                     case "1" -> Tema_01.T_01.main(args);
                     case "2" -> Tema_02.T_02.main(args);
                     case "3" -> Tema_03.T_03.main(args);
+                    case "4" -> Tema_04.T_04.main(args);
                     
                     case "0" -> {}
                     default -> System.out.println("\n  ¡¡¡ LA OPCIÓN NO ES CORRECTA !!!");
