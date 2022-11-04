@@ -18,8 +18,8 @@ public class ConexionMySQL {
         
         final String usuario = "root";
         final String password = "polako";
-        Connection dbConnection = null;
-        Statement statement = null;
+        Connection dbConnection = null; // REPRESENTA LA CONEXIÓN DIRECTA CON LA BASE DE DATOS
+        Statement statement = null;     // VA A CONTENER LA SENTENCIA SQL QUE QUERAMOS EJECUTAR
         
         try {
         

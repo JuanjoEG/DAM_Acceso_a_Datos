@@ -13,11 +13,11 @@ public class T_04 {
     public static void main(String[] args) {
         String menu="";
         do {
-            Scanner teclaStr = new Scanner(System.in);
+            Scanner teclaStr = new Scanner(System.in, "UTF-8");
             System.out.println("""                          
                                
         *******************************************************************************************************
-        *  TEMA 03                                       MANEJO DE CONECTORES I                               *
+        *  TEMA 04                                       MANEJO DE CONECTORES I                               *
         *******************************************************************************************************
         *                                                                                                     *
         *  1. PROTOCOLOS DE ACCESO A LAS BASES DE DATOS.                                                      *
@@ -116,16 +116,55 @@ public class T_04 {
                         System.out.println("""
                                            
         *******************************************************************************************************************************
-        *                                          CONFIGURACIÓN DE UNA CONEXIÓN EN CÓDIGO.                                           *
+        *                      MySQL               CONFIGURACIÓN DE UNA CONEXIÓN EN CÓDIGO.                                           *
         *******************************************************************************************************************************
-        *  1º - DESCARGAR EL DRIVER DE CONEXIÓN DE LA BASE DE DATOS             http://dev.mysql.com/downloads/mysql/                 *
+        *  1º - DESCARGAR EL DRIVER DE CONEXIÓN DE LA BASE DE DATOS                                                                   *
+        *                                                                                                                             *
+        *       DOCUMENTACIÓN:  https://dev.mysql.com/doc/connector-j/8.0/en/connector-j-usagenotes-connect-drivermanager.html        *
+        *                                                                       http://dev.mysql.com/downloads/mysql/                 *
         *                                                                       https://www.mysql.com/products/connector/             *
         *                                                                       WINDOWS -> INSTALADOR                                 *
-        *                                                                                  (CUSTOM) -> SERVIDOR / WORKBENCH / SHELL   *
         *                                                                       LINUX -> VERSIÓN COMMUNNITY SERVER                    *
-        *  2º - ABRIR WORKBENCH -> CONECTARSE A LA BASE DE DATOS -> HACER UNA CONSULTA -> ¿TODO OK?                                   *
-        *  3º - AÑADIR EL DRIVER AL PROYECTO                                                                                          *
-        *                  CARPETA LIBRARIES -> ADD JAR/FOLDER... -> mysql-connector-j-8.0.31.jar  (MIRAR DOCUMENTACIÓN)              *
+        *                                                                                                                             *
+        *                                       COMPONENTES MÍNIMOS A INSTALAR -->         (CUSTOM) -> SERVIDOR / WORKBENCH / SHELL   *
+        *                                                                                                                             *
+        *         CONFIGURACIÓN BÁSICA  -->  SERVIDOR DE BASE DE DATOS  -->  localhost     --> (SU DIRECCIÓN ES:127.0.0.1)            *
+        *                                                                    SI ES EN RED  -->  SU DIRECCIÓN IP.                      *
+        *                                                                    PUERTO        -->  3306        (POR DEFECTO)             *
+        *                                                                                                                             *
+        *                                        DURANTE LA INSTALACIÓN  -->  USUARIO root Y CONTRASEÑA.                              *
+        *                                                                                                                             *
+        *  2º - ABRIR GESTOR DE BASES DE DATOS MySQL.                                                                                 *
+        *       --> (MySQL Workbench, DBeaver, HeidiSQL, ...) -> CONECTARSE A LA BASE DE DATOS -> HACER UNA CONSULTA -> ¿TODO OK?     *
+        *                                                                                                                             *
+        *  DESDE NETBEANS                                             --> import java.sql.*;                                          *
+        *  3º - AÑADIR EL DRIVER AL PROYECTO (ConexioMySQL)                                                                           *
+        *       CARPETA LIBRARIES (BOTÓN DERECHO) -> ADD JAR/FOLDER... -> mysql-connector-j-8.0.31.jar                                *
+        *  4º - DEFINIR EL DRIVER A UTILIZAR.  -->  com.mysql.cj.jdbc.Driver                     (MIRAR EN LADOCUMENTACIÓN)           *
+        *  5º - INDICAR LA URL DE LA CONEXIÓN. -->  jdbc:mysql://localhost:3306/mysql            (EL SERVIDOR DE BASE DE DATOS)       *
+        *           SE PODRÍA PONER TAMBIÉN... -->  jdbc:mysql://127.0.0.1:3306/mysql                                                 *
+        *  6º - ALMACENAR EN VARIABLES:                                                                                               *
+        *                                  final String usuario = "root";                                                             *
+        *                                  final String password = "polako";                                                          *
+        *                                  Connection dbConnection = null;    REPRESENTA LA CONEXIÓN DIRECTA CON LA BASE DE DATOS     *
+        *                                  Statement statement = null;        VA A CONTENER LA SENTENCIA SQL QUE QUERAMOS EJECUTAR    *
+        *                                                                                                                             *
+        *  7º - ESTABLECER LA CONEXIÓN: USAREMOS LA CLASE --> java.sql.DriverManager      (RECOMENDADA POR JAVA)                      *
+        *       PODREMOS ESTABLECER TODAS LAS CONEXÍONES QUE NECESITEMOS Y CADA UNA IMPLEMENTA UNA INTERFAZ DE java.sql.Driver.       *
+        *                                                                                                                             *
+        *       REGISTRAMOS EL DRIVER   -->     Class.forName(DRIVER);                                                                *
+        *       ESTABLECER LA CONEXIÓN --->     dbConnection = DriverManager.getConnection(URL_CONEXION, usuario, password);          *
+        *                                                                                                                             *
+        *  8º - ESTABLECEMOS UNA CONSULTA SQL: -->     String selectTableSQL = "SELECT * FROM mysql.user";                            *
+        *                                                                                                                             *
+        *  9º - EJECUTAMOS LA INSTRUCCIÓN CON:                                                                                        *
+        *                                         statement = dbConnection.createStatement();                                         *
+        *                                         ResultSet rs = statement.executeQuery(selectTableSQL);                              *
+        *       EL RESULTADO DE LA CONSULTA SE GUARDA EN EL ResultSet rs QUE PODEMOS RECORRER CON UN BUCLE while                      *
+        *       RECORRE EN CADA FILA, UN ELEMENTO DE CADA COLUMNA.                                                                    *
+        *                                                                                                                             *
+        * 10º - REALIZAMOS LOS CIERRES DE LOS OBJETOS:       statement.close();        dbConnection.close();                          *
+        *                                                                                                                             *
         *******************************************************************************************************************************
                                                            
                                            """);

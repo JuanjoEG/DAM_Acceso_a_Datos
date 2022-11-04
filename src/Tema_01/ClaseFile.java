@@ -12,7 +12,7 @@ public class ClaseFile {
     public static void main(String[] args)  {
         String menu="";
         do {
-            Scanner teclaStr = new Scanner(System.in);
+            Scanner teclaStr = new Scanner(System.in, "UTF-8");
             System.out.println("""                          
                                
         **********************************************************************************

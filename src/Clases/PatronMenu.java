@@ -11,7 +11,7 @@ public class PatronMenu {
     public static void main(String[] args)  {
         String menu="";
         do {
-            Scanner teclaStr = new Scanner(System.in);
+            Scanner teclaStr = new Scanner(System.in, "UTF-8");
             System.out.println("""                          
                                
         **********************************************************************************
@@ -40,7 +40,7 @@ public class PatronMenu {
                                
                                """);
             try {
-                System.out.print("Seleccione una opciÃ³n: ");
+                System.out.print("Seleccione una opción: ");
                 menu = teclaStr.nextLine();
                 switch (menu) {
                     case "1" -> {}
@@ -58,12 +58,12 @@ public class PatronMenu {
                     case "13" -> {}
                     case "14" -> {}
                     case "0" -> {}
-                    default -> System.out.println("\n Â¡Â¡Â¡ LA OPCIÃ“N NO ES CORRECTA !!!");
+                    default -> System.out.println("\n ¡¡¡ LA OPCIÒN NO ES CORRECTA !!!");
                 }
             }  catch (Exception e) {
                 System.out.println("Error: " + e.toString());
                 System.out.println("MENSAJE " + e.getMessage());
-                System.out.println("La ExcepciÃ³n es: " + e.getClass());
+                System.out.println("La Excepción es: " + e.getClass());
             }
         } while (!"0".equals(menu));
     }
