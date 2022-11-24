@@ -58,9 +58,11 @@ public class T_05 {
         *  1º - GENERAR EL *.jar DEL PROYECTO EN NETBEANS.  RUN --> BUILD PROJECT (SPRING H2)                                         *
         *  2º - ME CREA EL ARCHIVO J:/Ejercicios/InitializrSpringbootProject_001/target/demo-0.0.1-SNAPSHOT.jar                       *
         *  3º - EN EL CMD ARRANCA PROGRAMA --> java -jar J:/Ejercicios/InitializrSpringbootProject_001/target/demo-0.0.1-SNAPSHOT.jar *
-        *  4º - EN EL CMD COMPROBAR CONEXXIÓN --> netstat -ao|find /i "8080"    (VER EL NÚMERO DE PROCESO)                            *
+        *  4º - EN EL CMD COMPROBAR CONEXXIÓN --> netstat -ao|find /i "8080"    (VER EL NÚMERO DE PROCESO - LOCAL PORT)               *
         *  5º - EN EL CMD MATAR PROGRAMA --> PULSAR (CTRL + C)                                                                        *
         *  6º - EN EL CMD MATAR PROCESO  --> taskkill /f /im <numero_proceso>                                                         *
+        *       (PODEMOS USAR EL PROGRAMA CURRPORTS PARA MATAR PROGRAMAS Y PROCESOS VIENDO SU LOCAL PORT)                             *
+        *         SELECCIONAR EL PROCESO CON PUERTO 8080 --> FILE --> KILL PROCESSES OF SELECTED PORTS                                *
         *                                                                                                                             *
         *******************************************************************************************************************************
         *  0. SALIR.                                                                                                                  *

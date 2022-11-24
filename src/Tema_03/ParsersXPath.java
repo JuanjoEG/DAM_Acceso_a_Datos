@@ -27,7 +27,7 @@ public class ParsersXPath {
     
     public static void main(String[] args) {
         
-        String ruta = "J:\\Ejercicios\\inputxml.txt";
+        String ruta = "J:\\Ejercicios\\inputxml.xml";
         
         try {
             
