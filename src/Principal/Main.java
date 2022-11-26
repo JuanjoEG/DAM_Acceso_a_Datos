@@ -28,8 +28,8 @@ public class Main {
         *  4. MANEJO DE CONECTORES I.                                *
         *  5. MANEJO DE CONECTORES II.                               *
         *  6. MANEJO DE CONECTORES III: SENTENCIAS.                  *
-        *  7. EL MAPEO OBJETO RELACIONAL.                            *
-        *  8.                                                        *
+        *  7. EL MAPEO OBJETO-RELACIONAL.                            *
+        *  8. EXPLORACIÓN DEL MAPEO OBJETO-RELACIONAL.               *
         *  9.                                                        *
         * 10.                                                        *
         * 11.                                                        *
