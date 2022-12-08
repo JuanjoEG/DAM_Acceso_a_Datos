@@ -2,6 +2,8 @@ package Tema_02;
 
 
 import static Clases.Utilidades.continuar;
+import static Principal.Main.esperar;
+import static Principal.Main.meterEspacios;
 import java.util.Scanner;
 
 /**
@@ -76,7 +78,12 @@ public class T_02 {
                     case "11" -> FlujosArraysReader.main(args);
                     case "12" -> FlujosArraysReaderWriter.main(args);
                     case "0" -> {}
-                    default -> System.out.println("\n ¡¡¡ LA OPCIÓN NO ES CORRECTA !!!");
+                    default -> {
+                            meterEspacios(25);
+                            System.out.println("\n  ¡¡¡ LA OPCIÓN NO ES CORRECTA !!!");
+                            meterEspacios(15);
+                            esperar(1500);
+                            }
                 }
             }  catch (Exception e) {
                 System.out.println("Error: " + e.toString());

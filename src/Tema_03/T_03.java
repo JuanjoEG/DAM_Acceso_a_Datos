@@ -2,6 +2,8 @@ package Tema_03;
 
 
 import static Clases.Utilidades.continuar;
+import static Principal.Main.esperar;
+import static Principal.Main.meterEspacios;
 import java.util.Scanner;
 
 /**
@@ -78,7 +80,12 @@ public class T_03 {
                     case "11" -> Tema_03.ParsersSAX.main(args);
                     case "12" -> Tema_03.ParsersXPath.main(args);
                     case "0" -> {}
-                    default -> System.out.println("\n ¡¡¡ LA OPCIÓN NO ES CORRECTA !!!");
+                    default -> {
+                            meterEspacios(25);
+                            System.out.println("\n  ¡¡¡ LA OPCIÓN NO ES CORRECTA !!!");
+                            meterEspacios(15);
+                            esperar(1500);
+                            }
                 }
             }  catch (Exception e) {
                 System.out.println("Error: " + e.toString());

@@ -1,5 +1,7 @@
 package Tema_05;
 
+import static Principal.Main.esperar;
+import static Principal.Main.meterEspacios;
 import java.util.Scanner;
 
 /**
@@ -74,7 +76,12 @@ public class T_05 {
                 menu = teclaStr.nextLine();
                 switch (menu) {                    
                     case "0" -> {}
-                    default -> System.out.println("\n ¡¡¡ LA OPCIÓN NO ES CORRECTA !!!");
+                    default -> {
+                            meterEspacios(25);
+                            System.out.println("\n  ¡¡¡ LA OPCIÓN NO ES CORRECTA !!!");
+                            meterEspacios(15);
+                            esperar(1500);
+                            }
                 }
             }  catch (Exception e) {
                 System.out.println("Error: " + e.toString());

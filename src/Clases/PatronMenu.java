@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author Juan Jos√© Est√©vez Gonz√°lez
+ * @author Juan JosÈ EstÈvez Gonz·lez
  */
 public class PatronMenu {
     
