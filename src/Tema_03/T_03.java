@@ -2,8 +2,8 @@ package Tema_03;
 
 
 import static Clases.Utilidades.continuar;
-import static Principal.Main.esperar;
-import static Principal.Main.meterEspacios;
+import static Clases.Utilidades.esperar;
+import static Clases.Utilidades.meterEspacios;
 import java.util.Scanner;
 
 /**
@@ -18,67 +18,46 @@ public class T_03 {
             Scanner teclaStr = new Scanner(System.in, "UTF-8");
             System.out.println("""                          
                                
-        *******************************************************************************************************
-        *  TEMA 03                                       TRABAJOS CON FICHEROS XML                            *
-        *******************************************************************************************************
-        *                                                                                                     *
-        *  1. TABLA DE HERRAMIENTAS PARA LA LECTURA DE FICHEROS XML.                                          *
-        *  2. EXCEPCIONES.                                                                                    *
-        *  3. PRUEBAS Y DOCUMENTACIÓN JUnit                                                                   *
+        ********************************************************************************************************************
+        *  TEMA 03                                       TRABAJOS CON FICHEROS XML
+        ********************************************************************************************************************
+        *   EL XML ES, CON DIFERENCIA, EL FORMATO MÁS UTILIZADO PARA EL INTERCAMBIO DE DATOS ENTRE APLICACIONES.
+        *   ES FUNDAMENTAL SABER TRABAJAR CON ESTE FORMATO, SUS TIPOLOGÍAS,
+        *   Y LOS MÉTODOS Y CLASES A UTILIZAR EN EL DESARROLLO DE APLICACIONES O UTILIDADES.
+        *                                                                                                 
+        *  1. ACCESO A DATOS EN FICHEROS XML CON DOM Y SAX.
+        *  2. CONVERSIÓN DE FICHEROS XML.
+        *  3. PROCESAMIENTO DE XML: XPATH.
+        *  4. EXCEPCIONES.                                                                   
+        *  5. PRUEBAS Y DOCUMENTACIÓN JUnit.
+        *
         * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-        *                EJEMPLOS:                                                                            *
+        *                EJEMPLOS:                                                                     
         * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-        *  10. Parsers DOM                                                                                    *
-        *  11. Parsers SAX                                                                                    *
-        *  12. Parsers XPath                                                                                  *
-        *******************************************************************************************************
-        *  0. SALIR.                                                                                          *
-        *******************************************************************************************************
+        *  10. Parsers DOM                                                                         
+        *  11. Parsers SAX                                                                                 
+        *  12. Parsers XPath
+        *  13. Prueba Unitaria.
+        ********************************************************************************************************************
+        *  0. SALIR.                                                                                       
+        ********************************************************************************************************************
                                
                                """);
             try {
                 System.out.print("Seleccione una opción: ");
                 menu = teclaStr.nextLine();
+                meterEspacios(25);
                 switch (menu) {
-                    case "1" -> {
-                        System.out.println("""
-                                           
-                            *************************************************************************************************
-                            *                       javax.xml.parsers  -->  LIBRERÍAS DE HERRAMIENTAS XML                   *
-                            *************************************************************************************************
-                            *                     SAX                       *                     DOM                       *
-                            *************************************************************************************************
-                            * BASADO EN EVENTOS                             * CARGA EL FICHERO EN MEMORIA                   *
-                            *************************************************************************************************
-                            * VA ANALIZANDO NODO POR NODO                   * BÚSQUEDA DE TAGS HACIA DELANTE Y HACIA DETRÁS *
-                            *************************************************************************************************
-                            * SIN RESTRICCIONES DE MEMORIA                  * ESTRUCTURA DE ÁRBOL                           *
-                            *************************************************************************************************
-                            * RAPIDEZ EN TIEMPO DE EJECUCIÓN                * MÁS LENTO EN TIEMPO DE EJECUCIÓN              *
-                            *************************************************************************************************
-                            * ES DE SÓLO LECTURA                            * SE PUEDEN INSERTAR O ELIMINAR NODOS           *
-                            *************************************************************************************************
-                            *                                               *  DataInputStream                              *
-                            *                                               *  DataOutputStream                             *
-                            *                                               *  PrintStream                                  *
-                            *************************************************************************************************
-                            *  SAXParserFactory                             *  DocumentBuilderFactoty                       *
-                            *  SAXParser                                    *  DocumentBuilder                              *
-                            *************************************************************************************************
-                            *  setValidating -> true    ATRIB. VALIDACÓN    *  setValidating -> true    ATRIB. VALIDACÓN    *
-                            *                                               *  setIgnoringElementContentWhitespace -> true  *
-                            *************************************************************************************************
-                                           
-                                           """);
-                    continuar();
-                    }
+                    case "1" -> AccesoDatos.main(args);
+                    case "2" -> Conversion.main(args);
+                    case "3" -> Procesamiento.main(args);
+                    case "4" -> Excepciones.main(args);
+                    case "5" -> PruebasDocument.main(args);
+                    case "10" -> Ejemplos_T03.ParsersDOM.main(args);
+                    case "11" -> Ejemplos_T03.ParsersSAX.main(args);
+                    case "12" -> Ejemplos_T03.ParsersXPath.main(args);
+                    case "13" -> Ejemplos_T03.PruebaUnitaria.main(args);
                     
-                    
-                    case "2" -> Tema_03.Excepciones.main(args);
-                    case "3" -> {}
-                    case "10" -> Tema_03.ParsersDOM.main(args);
-                    case "11" -> Tema_03.ParsersSAX.main(args);
-                    case "12" -> Tema_03.ParsersXPath.main(args);
                     case "0" -> {}
                     default -> {
                             meterEspacios(25);

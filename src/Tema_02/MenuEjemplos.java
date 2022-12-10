@@ -1,15 +1,15 @@
-package Tema_01;
+package Tema_02;
 
 import static Clases.Utilidades.esperar;
 import static Clases.Utilidades.meterEspacios;
-
 import java.util.Scanner;
 
 /**
  *
  * @author Juan José Estévez González
  */
-public class T_01 {
+
+public class MenuEjemplos {
     
     public static void main(String[] args)  {
         String menu="";
@@ -18,23 +18,20 @@ public class T_01 {
             System.out.println("""                          
                                
         ***********************************************************************************
-        *  TEMA 01            INTRODUCCIÓN AL MANEJO DE FICHEROS                          *
+        *  TEMA 02                      FLUJOS  -  STREAMS                                *
         ***********************************************************************************
-        *                                                                                 *
-        *  -. DEFINICIÓN Y TIPOS DE FICHEROS.                                             *
-        *        DEFINIMOS UN FICHERO COMO LA SUCESIÓN DE bits QUE FINALMENTE             *
-        *        SON ALMACENADOS EN UN DETERMINADO DISPOSITIVO.                           *
-        *        SE COMPONE DE NOMBRE Y EXTENSIÓN.                                        *
-        *     LOS METADATOS SERÁN LAS PROPIEDADES DEL FICHERO.                            *
-        *                                                                                 *
-        *                 2 GRANDES FAMILIAS:    * DE TEXTO (ASCII)                       *
-        *                                        * BINARIOS                               *
-        *  1. LA CLASE File (Java.io.File).                                               *
-        *  2. FORMAS DE ACCEDER A UN FICHERO.                                             *
-        *  3. OPERACIONES CON BUFFER.                                                     *
-        *  4. ESQUEMAS.                                                                   *
+        *                                   EJEMPLOS:                                     *
         * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-        *  5. EJEMPLOS.                                                                   *
+        * 10. FLUJOS BASADOS EN TUBERÍAS.                                                 *
+        * 11. DE FLUJOS BASADOS EN ARRAYS READER.                                         *        
+        * 12. DE FLUJOS BASADOS EN ARRAYS READER WRITER.                                  *
+        * 13. DE FLUJOS ANÁLISIS TOKEN.                                                   *
+        * 14. DE FLUJOS ANÁLISIS TOKEN2.                                                  *
+        * 15. DE FLUJOS ANÁLISIS PUSHBACK.                                                *
+        * 16. DE FLUJOS ANÁLISIS LINE NUMBER.                                             *
+        * 17. DE FLUJOS ANÁLISIS INFORMACIÓN WRITE.                                       *
+        * 18. DE FLUJOS ANÁLISIS INFORMACIÓN READ.                                        *
+        *                                                                                 *
         ***********************************************************************************
         *  0. SALIR.                                                                      *
         ***********************************************************************************
@@ -46,11 +43,15 @@ public class T_01 {
                 meterEspacios(25);
                 switch (menu) {
                     
-                    case "1" -> ClaseFile.main(args);
-                    case "2" -> FormasAcceder.main(args);
-                    case "3" -> OperacioneBuffer.main(args);
-                    case "4" -> Esquemas.main(args);                    
-                    case "5" -> Tema_01.MenuEjemplos.main(args);
+                    case "10" -> Ejemplos_T02.FlujosTuberias.main(args);
+                    case "11" -> Ejemplos_T02.FlujosArraysReader.main(args);
+                    case "12" -> Ejemplos_T02.FlujosArraysReaderWriter.main(args);
+                    case "13" -> Ejemplos_T02.FlujosAnalisisTokenizer.main(args);
+                    case "14" -> Ejemplos_T02.FlujosAnalisisTokenizer2.main(args);
+                    case "15" -> Ejemplos_T02.FlujosAnalisisPushback.main(args);
+                    case "16" -> Ejemplos_T02.FlujosAnalisisLineNumber.main(args);
+                    case "17" -> Ejemplos_T02.FlujosAnalisisInformacionWrite.main(args);
+                    case "18" -> Ejemplos_T02.FlujosAnalisisInformacionRead.main(args);
                     
                     case "0" -> {}
                     default -> {

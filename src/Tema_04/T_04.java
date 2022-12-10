@@ -1,9 +1,10 @@
 package Tema_04;
 
 
+import Ejemplos_T04.ConexionMySQL;
 import static Clases.Utilidades.continuar;
-import static Principal.Main.esperar;
-import static Principal.Main.meterEspacios;
+import static Clases.Utilidades.esperar;
+import static Clases.Utilidades.meterEspacios;
 import java.util.Scanner;
 
 /**
@@ -22,11 +23,12 @@ public class T_04 {
         *  TEMA 04                                       MANEJO DE CONECTORES I                               *
         *******************************************************************************************************
         *                                                                                                     *
-        *  1. PROTOCOLOS DE ACCESO A LAS BASES DE DATOS.                                                      *
-        *  2. COMPONENTES EN EL CONECTOR JDBC Y TIPOS DE CONEXIONES.                                          *
-        *  3. TIPOS DE DRIVERS DE CONEXIONES JDBC.                                                            *
-        *  4. VENTAJAS E INCONVENIENTES DEL USO DE CONECTORES.                                                *
-        *  5. CONFIGURACIÓN DE UNA CONEXIÓN EN CÓDIGO.                                                        *
+        *  1. EL DESFASE OBJETO-RELACIONAL.                                                                   *
+        *  2. PROTOCOLOS DE ACCESO A BASE DE DATOS.                                                           *
+        *  3. COMPONENTES DE JDBC.                                                                            *
+        *  4. TIPOS DE DRIVERS DE CONEXIONES JDBC.                                                            *
+        *  5. VENTAJAS E INCONVENIENTES DEL USO DE CONECTORES.                                                *
+        *  6. CONFIGURACIÓN DE UNA CONEXIÓN EN CÓDIGO.                                                        *
         * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
         *                EJEMPLOS:                                                                            *
         * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -39,139 +41,14 @@ public class T_04 {
             try {
                 System.out.print("Seleccione una opción: ");
                 menu = teclaStr.nextLine();
+                meterEspacios(25);
                 switch (menu) {
-                    case "1" -> {
-                        System.out.println("""
-                                           
-        *************************************************************************************************
-        * UN CONECTOR O DRIVER :      ES UNA SERIE DE CLASES IMPLEMENTADAS (API)                        *
-        *                             QUE FACILITAN LA CONEXIÓN A LA BASE DE DATOS ASOCIADA.            *
-        *************************************************************************************************
-        *                  BASÁNDONOS EN EL LENGUAJE SQL DISPONEMOS DE DOS PROTOCOLOS                   *
-        *************************************************************************************************
-        *       JDBC (JAVA DATABASE CONNECTIVITY)       *         ODBC (OPEN DATABASE CONNECTIVITY)     *
-        *              DESARROLLADO POR SUN             *           DESARROLLADO POR MICROSOFT          *
-        *************************************************************************************************
-                                                   
-                                           """);
-                    continuar();
-                    }
-                    
-                    case "2" -> {
-                        System.out.println("""
-                                           
-        *********************************************** ************************************************
-        *       COMPONENTES EN EL CONECTOR JDBC.      * *        TIPOS DE CONEXIONES.                  *
-        *********************************************** ************************************************
-        *   LA API DE JDBC.                           * *     ARQUITECTURA EN DOS CAPAS.               *
-        *   PAQUETE DE PRUEBAS JDBC.                  * *     ARQUITECTURA EN TRES CAPAS.              *
-        *   EL GESTOR JDBC.                           * ************************************************
-        *   EL PUENTE JDBC-ODBC.                      * 
-        *********************************************** 
-                                                   
-                                           """);
-                    continuar();
-                    }
-                    
-                    case "3" -> {
-                        System.out.println("""
-                                           
-        ***************************************************************
-        *              TIPOS DE DRIVERS DE CONEXIONES JDBC.           *
-        ***************************************************************
-        *   DRIVER TIPO 1 JDBC-ODBC             CON PUENTE ODBC       *
-        *   DRIVER TIPO 2 JDBC NATIVO           CON API NATIVO        *
-        *   DRIVER TIPO 3 JDBC NET  (3 CAPAS)   CON MIDDLEWARE        *
-        *   DRIVER TIPO 4 PROTOCOLO NATIVO                            *
-        ***************************************************************
-                                                   
-                                           """);
-                    continuar();                    
-                    }
-                    
-                    case "4" -> {
-                        System.out.println("""
-                                           
-        *******************************************************************************************************************************
-        * TIPO DRIVER *                VENTAJAS :)                            *                     INCONVENIENTES  :(                *
-        *******************************************************************************************************************************
-        *******************************************************************************************************************************
-        *  TIPO 1     *  FÁCIL DE ENCONTRAR                                   *  PEOR RENDIMIENTO: DEMASIADAS CAPAS INTERMEDIAS       *
-        *             *  ACCESO A GRAN CANTIDAD DE DRIVER ODBC                *  LIMITACIÓN DE FUNCIONALIDAD                          *
-        *             *                                                       *  NO FUNCIONAN BIEN CON APPLETS                        *
-        *******************************************************************************************************************************
-        *  TIPO 2     *  MEJOR RENDIMIENTO QUE EL TIPO 1                      *  NECESITA EL DRIVER INSTALADO EN EL CLIENTE           *
-        *             *                                                       *  NO SE PUEDE MOVER ENTRE PLATAFORMAS                  *
-        *******************************************************************************************************************************
-        *  TIPO 3     *  NO NECESITA LIBRERÍA DEL FABRICANTE EN EL CLIENTE    *  REQUIEREN CÓDIGO ESPECÍFICO DE BBDD                  *
-        *             *  MEJOR RENDIMIENTO EN INTERNET                        *            EN LA CAPA INTERMEDIA                      *
-        *******************************************************************************************************************************
-        *  TIPO 4     *  BUEN RENDIMIENTO                                     *  EL USUARIO NECESITATARÁ DISTINTO SOFTWARE DE         *
-        *             *  NO NECESITAN INSTALAR UN SOFTWARE ESPECIAL           *            CONEXIÒN (DRIVER) PARA CADA BBDD           *
-        *******************************************************************************************************************************
-                                                   
-                                           """);
-                    continuar();
-                    }
-                    
-                    case "5" -> {
-                        System.out.println("""
-                                           
-        *******************************************************************************************************************************
-        *                      MySQL               CONFIGURACIÓN DE UNA CONEXIÓN EN CÓDIGO.                                           *
-        *******************************************************************************************************************************
-        *  1º - DESCARGAR EL DRIVER DE CONEXIÓN DE LA BASE DE DATOS                                                                   *
-        *                                                                                                                             *
-        *       DOCUMENTACIÓN:  https://dev.mysql.com/doc/connector-j/8.0/en/connector-j-usagenotes-connect-drivermanager.html        *
-        *                                                                       http://dev.mysql.com/downloads/mysql/                 *
-        *                                                                       https://www.mysql.com/products/connector/             *
-        *                                                                       WINDOWS -> INSTALADOR                                 *
-        *                                                                       LINUX -> VERSIÓN COMMUNNITY SERVER                    *
-        *                                                                                                                             *
-        *                                       COMPONENTES MÍNIMOS A INSTALAR -->         (CUSTOM) -> SERVIDOR / WORKBENCH / SHELL   *
-        *                                                                                                                             *
-        *         CONFIGURACIÓN BÁSICA  -->  SERVIDOR DE BASE DE DATOS  -->  localhost     --> (SU DIRECCIÓN ES:127.0.0.1)            *
-        *                                                                    SI ES EN RED  -->  SU DIRECCIÓN IP.                      *
-        *                                                                    PUERTO        -->  3306        (POR DEFECTO)             *
-        *                                                                                                                             *
-        *                                        DURANTE LA INSTALACIÓN  -->  USUARIO root Y CONTRASEÑA.                              *
-        *                                                                                                                             *
-        *  2º - ABRIR GESTOR DE BASES DE DATOS MySQL.                                                                                 *
-        *       --> (MySQL Workbench, DBeaver, HeidiSQL, ...) -> CONECTARSE A LA BASE DE DATOS -> HACER UNA CONSULTA -> ¿TODO OK?     *
-        *                                                                                                                             *
-        *  DESDE NETBEANS                                             --> import java.sql.*;                                          *
-        *  3º - AÑADIR EL DRIVER AL PROYECTO (ConexioMySQL)                                                                           *
-        *       CARPETA LIBRARIES (BOTÓN DERECHO) -> ADD JAR/FOLDER... -> mysql-connector-j-8.0.31.jar                                *
-        *  4º - DEFINIR EL DRIVER A UTILIZAR.  -->  com.mysql.cj.jdbc.Driver                     (MIRAR EN LADOCUMENTACIÓN)           *
-        *  5º - INDICAR LA URL DE LA CONEXIÓN. -->  jdbc:mysql://localhost:3306/mysql            (EL SERVIDOR DE BASE DE DATOS)       *
-        *           SE PODRÍA PONER TAMBIÉN... -->  jdbc:mysql://127.0.0.1:3306/mysql                                                 *
-        *  6º - ALMACENAR EN VARIABLES:                                                                                               *
-        *                                  final String usuario = "root";                                                             *
-        *                                  final String password = "polako";                                                          *
-        *                                  Connection dbConnection = null;    REPRESENTA LA CONEXIÓN DIRECTA CON LA BASE DE DATOS     *
-        *                                  Statement statement = null;        VA A CONTENER LA SENTENCIA SQL QUE QUERAMOS EJECUTAR    *
-        *                                                                                                                             *
-        *  7º - ESTABLECER LA CONEXIÓN: USAREMOS LA CLASE --> java.sql.DriverManager      (RECOMENDADA POR JAVA)                      *
-        *       PODREMOS ESTABLECER TODAS LAS CONEXÍONES QUE NECESITEMOS Y CADA UNA IMPLEMENTA UNA INTERFAZ DE java.sql.Driver.       *
-        *                                                                                                                             *
-        *       REGISTRAMOS EL DRIVER   -->     Class.forName(DRIVER);                                                                *
-        *       ESTABLECER LA CONEXIÓN --->     dbConnection = DriverManager.getConnection(URL_CONEXION, usuario, password);          *
-        *                                                                                                                             *
-        *  8º - ESTABLECEMOS UNA CONSULTA SQL: -->     String selectTableSQL = "SELECT * FROM mysql.user";                            *
-        *                                                                                                                             *
-        *  9º - EJECUTAMOS LA INSTRUCCIÓN CON:                                                                                        *
-        *                                         statement = dbConnection.createStatement();                                         *
-        *                                         ResultSet rs = statement.executeQuery(selectTableSQL);                              *
-        *       EL RESULTADO DE LA CONSULTA SE GUARDA EN EL ResultSet rs QUE PODEMOS RECORRER CON UN BUCLE while                      *
-        *       RECORRE EN CADA FILA, UN ELEMENTO DE CADA COLUMNA.                                                                    *
-        *                                                                                                                             *
-        * 10º - REALIZAMOS LOS CIERRES DE LOS OBJETOS:       statement.close();        dbConnection.close();                          *
-        *                                                                                                                             *
-        *******************************************************************************************************************************
-                                                           
-                                           """);
-                    continuar();
-                    }
+                    case "1" -> DesfaseObjRel.main(args);
+                    case "2" -> ProtolosAccesoBD.main(args);                    
+                    case "3" -> ComponenteJDBC.main(args);
+                    case "4" -> TiposDriversConexionesJDBC.main(args);
+                    case "5" -> VentajaInconvenientes.main(args);                    
+                    case "6" -> ConfigConexCodig.main(args);
                     case "10" -> ConexionMySQL.main(args);
                     case "0" -> {}
                     default -> {

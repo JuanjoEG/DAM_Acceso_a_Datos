@@ -1,5 +1,7 @@
 package Principal;
 
+import static Clases.Utilidades.esperar;
+import static Clases.Utilidades.meterEspacios;
 import java.util.Scanner;
 
 /**
@@ -17,27 +19,28 @@ public class Main {
         String menu="";
         do {
             Scanner teclaStr = new Scanner(System.in, "UTF-8");
+            meterEspacios(15);
             System.out.println("""                          
                                
         **************************************************************
         *                     ACCESO A DATOS                         *
         **************************************************************
         *                                                            *
-        *  1. INTRODUCCIÓN AL MANEJO DE FICHEROS.                    *
-        *  2. FLUJOS.                                                *
-        *  3. TRABAJOS CON FICHEROS XML.                             *
-        *  4. MANEJO DE CONECTORES I.                                *
-        *  5. MANEJO DE CONECTORES II.                               *
-        *  6. MANEJO DE CONECTORES III: SENTENCIAS.                  *
-        *  7. EL MAPEO OBJETO-RELACIONAL.                            *
-        *  8. EXPLORACIÓN DEL MAPEO OBJETO-RELACIONAL.               *
-        *  9. BASES DE DATOS ORIENTADAS A OBJETOS.                   *
-        * 10.                                                        *
-        * 11.                                                        *
-        * 12.                                                        *
-        * 13.                                                        *
-        * 14.                                                        *
-        * 15.                                                        *
+        *   TEMA  1. INTRODUCCIÓN AL MANEJO DE FICHEROS.             *
+        *   TEMA  2. FLUJOS.                                         *
+        *   TEMA  3. TRABAJOS CON FICHEROS XML.                      *
+        *   TEMA  4. MANEJO DE CONECTORES I.                         *
+        *   TEMA  5. MANEJO DE CONECTORES II.                        *
+        *   TEMA  6. MANEJO DE CONECTORES III: SENTENCIAS.           *
+        *   TEMA  7. EL MAPEO OBJETO-RELACIONAL.                     *
+        *   TEMA  8. EXPLORACIÓN DEL MAPEO OBJETO-RELACIONAL.        *
+        *   TEMA  9. BASES DE DATOS ORIENTADAS A OBJETOS.            *
+        *   TEMA 10.                                                 *
+        *   TEMA 11.                                                 *
+        *   TEMA 12.                                                 *
+        *   TEMA 13.                                                 *
+        *   TEMA 14.                                                 *
+        *   TEMA 15.                                                 *
         *                                                            *
         **************************************************************
         *  0. SALIR.                                                 *
@@ -47,6 +50,7 @@ public class Main {
             try {
                 System.out.print("Seleccione una opción: ");
                 menu = teclaStr.nextLine();
+                meterEspacios(25);
                 switch (menu) {
                     case "1" -> Tema_01.T_01.main(args);
                     case "2" -> Tema_02.T_02.main(args);
@@ -69,21 +73,6 @@ public class Main {
                 System.out.println("La Excepción es: " + e.getClass());
             }
         } while (!"0".equals(menu));
-    }
-                
-    public static void esperar(int segundos) {
-        try {            
-            Thread.sleep(segundos);
-        } catch (Exception e) {
-            System.out.println(e);
-        }
-    }
-    
-    public static void meterEspacios(int espacios) {
-    
-        for (int i=0; i<espacios; i++) {
-                System.out.println("");
-            }
-    
-    }
+    }    
+
 }
