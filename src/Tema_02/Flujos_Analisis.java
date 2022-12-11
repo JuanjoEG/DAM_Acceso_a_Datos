@@ -35,7 +35,9 @@ public class Flujos_Analisis {
                                
             - ESTOS CONTENIDOS LEÍDOS CON ANTERIORIDAD,
               SERÁN DE NUEVO 'EMPUJADOS' A LA SECUENCIA,
-              PARA LEERLOS POSTERIORMENTE CUANDO SE HAGA DE NUEVO read().                      
+              PARA LEERLOS POSTERIORMENTE CUANDO SE HAGA DE NUEVO read(). 
+                               
+            - unread(data)  --> DEVUELVE AL STREAM DE DATOS EL BYTE QUE HEMOS LEÍDO CON ANTERIORIDAD.                     
                                
 ********************************************************************************************************************
 

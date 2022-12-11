@@ -58,6 +58,7 @@ public class Main {
                     case "4" -> Tema_04.T_04.main(args);
                     case "5" -> Tema_05.T_05.main(args);
                     case "6" -> Tema_06.T_06.main(args);
+                    case "7" -> Tema_07.T_07.main(args);
                     
                     case "0" -> {}
                     default -> {
