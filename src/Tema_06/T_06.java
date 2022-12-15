@@ -54,7 +54,7 @@ public class T_06 {
                     case "6" -> EjecSentConsult02.main(args);
                     case "7" -> GestionTransacc01.main(args);
                     case "8" -> GestionTransacc02.main(args);
-                    case "9" -> TablaResumen.main(args);
+                    case "9" -> TablaResumenT06.main(args);
                     
                     case "0" -> {}
                     default -> {

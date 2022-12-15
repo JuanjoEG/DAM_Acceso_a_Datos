@@ -1,4 +1,4 @@
-package Principal;
+package Principal_Main;
 
 import static Clases.Utilidades.esperar;
 import static Clases.Utilidades.meterEspacios;

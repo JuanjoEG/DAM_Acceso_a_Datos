@@ -23,59 +23,26 @@ public class FlujosAnalisisTokenizer {
         // INSTANCIAMOS UN OBJETO StreamTokenizer Y LE PASAMOS UN OBJETO StringReader.
         StreamTokenizer streamTokenizer = new StreamTokenizer (stringReader);
         
-        // ESTABLECEMOS  EL CARACTER Nº 32 --> (EL ESPACIO) COMO UN NUEVO TOKEN.
-        streamTokenizer.ordinaryChar(32);
-                
-        // EN UN SÓLO PASO.        
-        // StreamTokenizer streamTokenizer = new StreamTokenizer (new StringReader(chars));
-        
+        // ACTIVA  TT_EOL
+        streamTokenizer.eolIsSignificant(true);
+         
         try {        
             while(streamTokenizer.nextToken() != StreamTokenizer.TT_EOF) {            
-                
+                     
+                // RULE SWITCH
+                switch (streamTokenizer.ttype) {
+                    case StreamTokenizer.TT_WORD   -> System.out.println("  PALABRA   : "  + streamTokenizer.sval);
+                    case StreamTokenizer.TT_NUMBER -> System.out.println("  NÚMERO    : " + streamTokenizer.nval);
+                    case StreamTokenizer.TT_EOL    -> System.out.println("  FIN LÍNEA : "  + streamTokenizer);
+                    default -> System.out.println("  OTRO      : " + streamTokenizer);
+                }
                 if (linea !=streamTokenizer.lineno()) {
                 
                     System.out.println("***** LÍNEA NUEVA *****");
                 }
                 // PINTAMOS EL Nº DE LÍNEA.
                 linea = streamTokenizer.lineno();
-                System.out.print("LÍNEA: " + linea);
-                
-                // TRES MANERAS DE IMPLEMENTAR EL ANÁLISIS DEL TEXTO:
-               
-                // RULE SWITCH
-                switch (streamTokenizer.ttype) {
-                    case StreamTokenizer.TT_WORD -> System.out.println(" PALABRA: " + streamTokenizer.sval);
-                    case StreamTokenizer.TT_NUMBER -> System.out.println("  NÚMERO:  " + streamTokenizer.nval);
-                    case StreamTokenizer.TT_EOL -> System.out.println("FIN LÍNEA : " + streamTokenizer);
-                    default -> System.out.println("   OTRO : " + streamTokenizer);
-                }
-            /*
-                // SWITCH
-                switch (streamTokenizer.ttype) {
-                    case StreamTokenizer.TT_WORD:
-                        System.out.println(" PALABRA: " + streamTokenizer.sval);
-                        break;
-                    case StreamTokenizer.TT_NUMBER:
-                        System.out.println("  NÚMERO:  " + streamTokenizer.nval);
-                        break;
-                    case StreamTokenizer.TT_EOL:  
-                        System.out.println("FIN LÍNEA : " + streamTokenizer);
-                        break;
-                    default:
-                        System.out.println("   OTRO : " + streamTokenizer);
-                        break;
-                }
-                // IF
-                if (streamTokenizer.ttype == StreamTokenizer.TT_WORD) {                
-                    System.out.println(" PALABRA: " + streamTokenizer.sval);
-                } else if (streamTokenizer.ttype == StreamTokenizer.TT_NUMBER) {                
-                    System.out.println("  NÚMERO:  " + streamTokenizer.nval);
-                } else if (streamTokenizer.ttype == StreamTokenizer.TT_EOL) {                
-                  System.out.println("FIN LÍNEA : " + streamTokenizer);  
-                } else {                    
-                  System.out.println("   OTRO : " + streamTokenizer);  
-                }
-            */
+                System.out.print("  LÍNEA     : " + linea);
             }            
         } catch (IOException e) {
         

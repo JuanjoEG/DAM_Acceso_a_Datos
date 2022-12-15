@@ -1,5 +1,6 @@
 package Tema_07;
 
+import static Clases.Utilidades.continuar;
 import static Clases.Utilidades.esperar;
 import static Clases.Utilidades.meterEspacios;
 import java.util.Scanner;
@@ -8,7 +9,7 @@ import java.util.Scanner;
  *
  * @author Juan José Estévez González
  */
-public class TablaResumen {
+public class TablaResumenT07 {
     
     public static void main(String[] args) {
         String menu="";
@@ -17,7 +18,7 @@ public class TablaResumen {
             System.out.println("""                          
                                
         *******************************************************************************************************************************
-        *  TEMA 07                                       EL MAPEO OBJETO RELACIONAL  ( ORM )                                          *
+        *  TEMA 07    1/2                                EL MAPEO OBJETO RELACIONAL  ( ORM )                                          *
         *******************************************************************************************************************************
         * 1.- SE TRATA DE DE GRABAR UN OBJETO JAVA --> EN UNA BASE DE DATOS RELACIONAL  (TABLA CON FILAS Y COLUMNAS)                  *
         * 2.- TRADUCIR LOS DATOS DE UNA TABLA EN UNA BASE DE DATOS RELACIONAL --> A UN OBJETO JAVA                                    *
@@ -47,6 +48,18 @@ public class TablaResumen {
         *      -  Query Object           --> NOS PERMITE HACER CONSULTAS SQL Y HQL                          EJECUTAR LAS INSTRUCCIONE *
         *      -  Criteria Object        --> NOS PERMITE HACER CONSULTAS JAVA                                  FILTRAR USANDO OBJETOS *
         *                                                                                                                             *
+        *******************************************************************************************************************************
+
+                                                     """);
+        
+                    continuar();
+        
+                    System.out.println("""
+                                       
+        *******************************************************************************************************************************
+        *  TEMA 07                                       EL MAPEO OBJETO RELACIONAL  ( ORM )                                          *
+        *******************************************************************************************************************************
+        *  2/2                                                  INSTALAR HIBERNATE                                                    *
         *******************************************************************************************************************************
         *  INSTALAR HIBERNATE:  SIMILAR A INSTALACIÓN H2 TEMA 5                                                                       *
         *                                                                                                                             *

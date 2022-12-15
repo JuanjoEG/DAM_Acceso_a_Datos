@@ -50,7 +50,7 @@ public class T_07 {
                     case "5" -> DefinicArquitectHibernate.main(args);
                     case "6" -> ComponPrincHibernate.main(args);
                     
-                    case "7" -> TablaResumen.main(args);
+                    case "7" -> TablaResumenT07.main(args);
                     
                     case "0" -> {}
                     default -> {

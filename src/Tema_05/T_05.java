@@ -26,6 +26,7 @@ public class T_05 {
         *  3. GESTORES DE BASES DE DATOS EMBEBIDOS I: Apache Derby, JavaDB Y H2.                              *
         *  4. GESTORES DE BASES DE DATOS INDEPENDIENTES.                                                      *
         *  5. AÑADIR BASE DE DATOS H2 USANDO SPRING BOOT.                                                     *
+        *  6. COMPARATIVA.                                                                                    *
         *                                                                                                     *
         *******************************************************************************************************
         *  0. SALIR.                                                                                          *
@@ -42,8 +43,9 @@ public class T_05 {
                     case "1" -> GestoresBBDD.main(args);
                     case "2" -> GestoresHyperObject.main(args);
                     case "3" -> GestoresApachJavaH2.main(args);
-                    case "4" -> {}
+                    case "4" -> GestoresIndepend.main(args);
                     case "5" -> BaseDatosH2SpringBoot.main(args);
+                    case "6" -> Comparativa.main(args);
                     
                     case "0" -> {}
                     default -> {

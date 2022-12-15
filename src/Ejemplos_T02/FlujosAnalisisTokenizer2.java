@@ -21,12 +21,12 @@ public class FlujosAnalisisTokenizer2 {
         
         // INSTANCIAMOS UN OBJETO StreamTokenizer Y LE PASAMOS UN OBJETO StringReader.
         StreamTokenizer streamTokenizer = new StreamTokenizer (stringReader);        
-          
-        // ESTABLECEMOS  EL CARACTER Nº 10 --> (EL SALTO DE LÍNEA) COMO UN NUEVO TOKEN.
-        streamTokenizer.ordinaryChar(10);
-                
+               
         // EN UN SÓLO PASO.        
         // StreamTokenizer streamTokenizer = new StreamTokenizer (new StringReader(chars));
+        
+        // ACTIVA  TT_EOL
+        streamTokenizer.eolIsSignificant(true);
         
         try {        
             while(streamTokenizer.nextToken() != StreamTokenizer.TT_EOF) {
@@ -35,10 +35,10 @@ public class FlujosAnalisisTokenizer2 {
                
                 // RULE SWITCH
                 switch (streamTokenizer.ttype) {
-                    case StreamTokenizer.TT_WORD -> System.out.println(" PALABRA: " + streamTokenizer.sval);
-                    case StreamTokenizer.TT_NUMBER -> System.out.println("  NÚMERO:  " + streamTokenizer.nval);
-                    case StreamTokenizer.TT_EOL -> System.out.println("FIN LÍNEA : " + streamTokenizer);
-                    default -> System.out.println("   OTRO : " + streamTokenizer);
+                    case StreamTokenizer.TT_WORD   -> System.out.println("  PALABRA   : "  + streamTokenizer.sval);
+                    case StreamTokenizer.TT_NUMBER -> System.out.println("  NÚMERO    : " + streamTokenizer.nval);
+                    case StreamTokenizer.TT_EOL    -> System.out.println("  FIN LÍNEA : "  + streamTokenizer);
+                    default -> System.out.println("  OTRO      : " + streamTokenizer);
                 }
             /*
                 // SWITCH
