@@ -1,8 +1,6 @@
 package Tema_01;
 
-
-import static Clases.Utilidades.esperar;
-import static Clases.Utilidades.meterEspacios;
+import static Principal_Main.Main.*;
 import java.util.Scanner;
 
 /**

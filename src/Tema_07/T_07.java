@@ -1,8 +1,6 @@
 package Tema_07;
 
-import Tema_06.*;
-import static Clases.Utilidades.esperar;
-import static Clases.Utilidades.meterEspacios;
+import static Principal_Main.Main.*;
 import java.util.Scanner;
 
 /**
@@ -11,31 +9,45 @@ import java.util.Scanner;
  */
 public class T_07 {
     
+    public static String punto_01 ="*  PUNTO  1.  DEFINICIÓN DEL MAPEO OBJETO RELACIONAL.\n";
+    public static String punto_02 ="*  PUNTO  2.  VENTAJAS E INCONVENIENTES DEL MAPEO OBJETO RELACIONAL.\n";
+    public static String punto_03 ="*  PUNTO  3.  FASES DE MAPEO OBJETO RELACIONAL.\n";
+    public static String punto_04 ="*  PUNTO  4.  HERRAMIENTAS ORM.\n";
+    public static String punto_05 ="*  PUNTO  5.  DEFINICIÓN DE LA ARQUITECTURA DE HIBERNATE.\n";
+    public static String punto_06 ="*  PUNTO  6.  COMPONENTES PRINCIPALES DE HIBERNATE.\n";
+    public static String punto_07 ="*  PUNTO  7.  TABLA RESUMEN. EL MAPEO OBJETO RELACIONAL  ( ORM ).\n";
+    public static String punto_08 ="*  PUNTO  8.  TABLA RESUMEN. INSTALAR HIBERNATE.\n";
+    public static String punto_09 ="*  PUNTO  9.  T O D O.\n";
+        
     public static void main(String[] args) {
         String menu="";
         do {
             Scanner teclaStr = new Scanner(System.in, "UTF-8");
-            System.out.println("""
+            meterEspacios(25);
+            System.out.println("""                          
                                
-        *******************************************************************************************************
-        *  TEMA 07                          EL MAPEO OBJETO RELACIONAL                                        *
-        *******************************************************************************************************
-        *                                                                                                     *
-        *  1. DEFINICIÓN DEL MAPEO OBJETO RELACIONAL.                                                         *
-        *  2. VENTAJAS E INCONVENIENTES DEL MAPEO OBJETO RELACIONAL.                                          *
-        *  3. FASES DE MAPEO OBJETO RELACIONAL.                                                               *
-        *  4. HERRAMIENTAS ORM.                                                                               *
-        *                                                                                                     *
-        *  5. DEFINICIÓN DE LA ARQUITECTURA DE HIBERNATE.                                                     *
-        *  6. COMPONENTES PRINCIPALES DE HIBERNATE.                                                           *
-        *                                                                                                     *
-        *  7. TABLA RESUMEN.                                                                                  *
-        *                                                                                                     *
-        *******************************************************************************************************
-        *  0. SALIR.                                                                                          *
-        *******************************************************************************************************                          
-
-
+        *******************************************************************************************
+        """ + Principal_Main.Main.asignatura + """
+        *******************************************************************************************
+        """ + Principal_Main.Main.tema_07 + """
+        *******************************************************************************************
+        *
+        """ + punto_01 + """                        
+        """ + punto_02 + """
+        """ + punto_03 + """                        
+        """ + punto_04 + """
+        """ + punto_05 + """                        
+        """ + punto_06 + """
+        *
+        """ + punto_07 + """                        
+        """ + punto_08 + """
+        *
+        """ + punto_09 + """
+        *
+        *******************************************************************************************
+        *  0. SALIR.
+        *******************************************************************************************
+                               
                                """);
             try {
                 System.out.print("Seleccione una opción: ");
@@ -43,14 +55,7 @@ public class T_07 {
                 meterEspacios(25);
                 switch (menu) {
                     
-                    case "1" -> DefinicMapeoOR.main(args);
-                    case "2" -> VentajasInconvenientesORM.main(args);
-                    case "3" -> FasesMapeoOR.main(args);
-                    case "4" -> HerramientasORM.main(args);
-                    case "5" -> DefinicArquitectHibernate.main(args);
-                    case "6" -> ComponPrincHibernate.main(args);
-                    
-                    case "7" -> TablaResumenT07.main(args);
+                    case "1", "2", "3", "4", "5", "6", "7", "8", "9" -> Recursos_07.recurso(menu);
                     
                     case "0" -> {}
                     default -> {

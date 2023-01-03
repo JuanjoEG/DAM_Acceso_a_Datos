@@ -1,8 +1,6 @@
 package Tema_05;
 
-
-import static Clases.Utilidades.esperar;
-import static Clases.Utilidades.meterEspacios;
+import static Principal_Main.Main.*;
 import java.util.Scanner;
 
 /**
@@ -11,42 +9,51 @@ import java.util.Scanner;
  */
 public class T_05 {
     
+    public static String punto_01 ="*  PUNTO  1.  GESTORES DE BASES DE DATOS EMBEBIDOS E INDEPENDIENTES.\n";
+    public static String punto_02 ="*  PUNTO  2.  GESTORES DE BASES DE DATOS EMBEBIDOS I: HyperSQL Y ObjectDB.\n";
+    public static String punto_03 ="*  PUNTO  3.  GESTORES DE BASES DE DATOS EMBEBIDOS I: Apache Derby, JavaDB Y H2.\n";
+    public static String punto_04 ="*  PUNTO  4.  GESTORES DE BASES DE DATOS INDEPENDIENTES.\n";
+    public static String punto_05 ="*  PUNTO  5.  AÑADIR BASE DE DATOS H2 USANDO SPRING BOOT.\n";
+    public static String punto_06 ="*  PUNTO  6.  ARRANCAR SPRING H2 JPA WEB SIN TENER EL IDE.\n";
+    public static String punto_07 ="*  PUNTO  7.  COMPARATIVA.\n";
+    public static String punto_08 ="*  PUNTO  8.  T O D O.\n";
+        
     public static void main(String[] args) {
         String menu="";
         do {
             Scanner teclaStr = new Scanner(System.in, "UTF-8");
-            System.out.println("""
+            meterEspacios(25);
+            System.out.println("""                          
                                
-        *******************************************************************************************************
-        *  TEMA 05                            MANEJO DE CONECTORES II                                         *
-        *******************************************************************************************************
-        *                                                                                                     *
-        *  1. GESTORES DE BASES DE DATOS EMBEBIDOS E INDEPENDIENTES.                                          *
-        *  2. GESTORES DE BASES DE DATOS EMBEBIDOS I: HyperSQL Y ObjectDB.                                    *
-        *  3. GESTORES DE BASES DE DATOS EMBEBIDOS I: Apache Derby, JavaDB Y H2.                              *
-        *  4. GESTORES DE BASES DE DATOS INDEPENDIENTES.                                                      *
-        *  5. AÑADIR BASE DE DATOS H2 USANDO SPRING BOOT.                                                     *
-        *  6. COMPARATIVA.                                                                                    *
-        *                                                                                                     *
-        *******************************************************************************************************
-        *  0. SALIR.                                                                                          *
-        *******************************************************************************************************                          
-
-
+        *******************************************************************************************
+        """ + Principal_Main.Main.asignatura + """
+        *******************************************************************************************
+        """ + Principal_Main.Main.tema_05 + """
+        *******************************************************************************************
+        *
+        """ + punto_01 + """                        
+        """ + punto_02 + """
+        """ + punto_03 + """                        
+        """ + punto_04 + """
+        """ + punto_05 + """                        
+        """ + punto_06 + """
+        """ + punto_07 + """
+        *
+        """ + punto_08 + """
+        *
+        *******************************************************************************************
+        *  0. SALIR.
+        *******************************************************************************************
+                               
                                """);
             try {
                 System.out.print("Seleccione una opción: ");
                 menu = teclaStr.nextLine();
                 meterEspacios(25);
                 switch (menu) {
-
-                    case "1" -> GestoresBBDD.main(args);
-                    case "2" -> GestoresHyperObject.main(args);
-                    case "3" -> GestoresApachJavaH2.main(args);
-                    case "4" -> GestoresIndepend.main(args);
-                    case "5" -> BaseDatosH2SpringBoot.main(args);
-                    case "6" -> Comparativa.main(args);
                     
+                    case "1", "2", "3", "4", "5", "6", "7", "8" -> Recursos_05.recurso(menu);
+
                     case "0" -> {}
                     default -> {
                             meterEspacios(25);
