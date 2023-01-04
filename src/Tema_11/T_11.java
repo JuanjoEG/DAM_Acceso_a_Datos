@@ -1,7 +1,6 @@
 package Tema_11;
 
 import static Principal_Main.Main.*;
-import java.util.Scanner;
 
 /**
  *
@@ -12,9 +11,9 @@ public class T_11 {
     public static String punto_01 ="*  PUNTO  1.  CARACTERÍSTICAS DE LAS BASES DE DATOS No-SQL.\n";
     public static String punto_02 ="*  PUNTO  2.  FUNDAMENTOS DE LAS BASES DE DATOS No-SQL.\n";
     public static String punto_03 ="*  PUNTO  3.  DIFERENCIAS ENTR BASES DE DATOS RELACIONALES Y No-SQL.\n";
-    public static String punto_04 ="*  PUNTO  4.  REQUISITOS DE UNA SOLUCIÓN No-SQL A NIVEL EMPRESARIAL.\n";
-    public static String punto_05 ="*  PUNTO  5.  BENEFICIOS DE LAS BASES DE DATOS No-SQL.\n";
-    public static String punto_06 ="*  PUNTO  6.\n";
+    public static String punto_04 ="*  PUNTO  4.  BENEFICIOS DE LAS BASES DE DATOS No-SQL I. REQUISITOS DE UNA SOLUCIÓN No-SQL A NIVEL EMPRESARIAL.\n";
+    public static String punto_05 ="*  PUNTO  5.  BENEFICIOS DE LAS BASES DE DATOS No-SQL II.\n";
+    public static String punto_06 ="*  PUNTO  6.  BENEFICIOS DE LAS BASES DE DATOS No-SQL III.\n";
     public static String punto_07 ="*  PUNTO  7.\n";
     public static String punto_08 ="*  PUNTO  8.\n";
     public static String punto_09 ="*  PUNTO  9.\n";
@@ -30,7 +29,6 @@ public class T_11 {
         
         String menu="";
         do {
-            Scanner teclaStr = new Scanner(System.in, "UTF-8");
             meterEspacios(25);
             System.out.println("""                          
                                
@@ -65,25 +63,18 @@ public class T_11 {
                                """);
                                
             try {
-                System.out.print("Seleccione una opción: ");
-                menu = teclaStr.nextLine();
-                meterEspacios(25);
+                menu = miTry();
                 switch (menu) {
                     
                     case "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16" -> Recursos_11.recurso(menu); 
                     
                     case "0" -> {}
                     default -> {
-                            meterEspacios(25);
-                            System.out.println("\n  ¡¡¡ LA OPCIÓN NO ES CORRECTA !!!");
-                            meterEspacios(15);
-                            esperar(1500);
+                            miDefault();
                             }
                 }
             }  catch (Exception e) {
-                System.out.println("Error: " + e.toString());
-                System.out.println("MENSAJE " + e.getMessage());
-                System.out.println("La Excepción es: " + e.getClass());
+                miError(e);
             }
         } while (!"0".equals(menu));
     }

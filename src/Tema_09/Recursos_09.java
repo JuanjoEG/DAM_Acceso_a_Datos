@@ -2,7 +2,6 @@ package Tema_09;
 
 import static Principal_Main.Main.*;
 import static Tema_09.T_09.*;
-import java.util.Scanner;
 
 /**
  *
@@ -433,8 +432,6 @@ public class Recursos_09 {
         
         String menu="";
         do {
-            Scanner teclaStr = new Scanner(System.in, "UTF-8");
-            
             switch (opcion) {                
                 case "1" -> System.out.println(recurso_01);
                 case "2" -> System.out.println(recurso_02);
@@ -471,23 +468,16 @@ public class Recursos_09 {
                     System.out.println(recurso_11);                    
                 }
             }
-            try {
-                System.out.print("Seleccione una opción: ");
-                menu = teclaStr.nextLine();
-                switch (menu) {
-                   
+            try {                
+                menu = miTryRecursos();                
+                switch (menu) {                   
                     case "0" -> {}
                     default -> {
-                            meterEspacios(25);
-                            System.out.println("\n  ¡¡¡ LA OPCIÓN NO ES CORRECTA !!!");
-                            meterEspacios(15);
-                            esperar(1500);
+                            miDefault();
                             }
                 }
             }  catch (Exception e) {
-                System.out.println("Error: " + e.toString());
-                System.out.println("MENSAJE " + e.getMessage());
-                System.out.println("La Excepción es: " + e.getClass());
+                miError(e);
             }
         } while (!"0".equals(menu));   
     }

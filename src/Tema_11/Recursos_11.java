@@ -2,7 +2,6 @@ package Tema_11;
 
 import static Principal_Main.Main.*;
 import static Tema_11.T_11.*;
-import java.util.Scanner;
 
 /**
  *
@@ -188,6 +187,25 @@ public class Recursos_11 {
         """ + punto_05 + """
         **********************************************************************************************************************************
                        
+            CAPACIDAD DE TENER MÚLTIPLES CENTROS DE DATOS: (FISICOS Y EN LA NUBE).
+                    UNA BUENA SOLUCIÓN EMPRESARIAL No-SQL DEBE ADMITIR LA IMPLEMENTACIÓN DE VARIOS CENTROS DE DATOS
+                    Y DEBE PROPORCIONAR UNA OPCIÓN CONFIGURABLE PARA MANTENER UN EQUILIBRIO ENTRE EL RENDIMIENTO Y LA COHERENCIA.
+                            - POR LO GENERAL, EN UN ENTORNO PROFESIONAL,
+                              LAS EMPRESAS POSEEN BASES DE DATOS ALTAMENTE DISTRIBUIDAD QUE SE ENCUENTRAN
+                              EN VARIOS CENTROS DE DATOS Y UBICACIONES GEOGRÁFICAS DISTINTAS.
+                            - AUNQUE LA RECEPCIÓN DE DATOS ES UNA CARACTERÍSTICA QUE OFRECEN TODAS LAS BASES DE DATOS RELACIONALES,
+                              NINGUNA PUEDE OFRECER UN MODELO SIMPLE DE DISTRIBUCIÓN DE DATOS ENTRE VARIOS CENTROS DE DATOS
+                              SIN SUFRIR PROBLEMAS DE RENDIMIENTO.
+                         
+            FÁCIL REPLICACIÓN INDEPENDIENTEMENTE DE LA UBICACIÓN:
+                    PARA EVITAR QUE LA PÉRDIDA DE DATOS AFECTE A UNA APLICACIÓN,
+                    UNA BUENA SOLUCIÓN No-SQL PROPORCIONA UNA GRAN CAPACIDAD DE REPLICACIÓN.
+                    CAPACIDAD DE LECTURA Y ESCRITURA EN CUALQUIER LUGAR CON COMPATIBILIDAD TOTAL E INDEPENDIENTE DE UBICACIÓN.
+                            - SE PUEDEN ESCRIBIR DATOS EN CUALQUIER NODO DE UN CLÚSTER.
+                            - DEBE GARANTIZAR QUE LOS DATOS ESTÉN SEGUROS EN CASO DE CORTE DE SUMINISTRO ELÉCTRICO U OTRO TIPO DE INCIDENTE.
+                            - HACER QUE SE REPLIQUEN EN OTROS NODOS DE MANERA AUTOMÁTICA.
+                            - PONERLOS A DISPOSICIÓN DE TODOS LOS USUARIOS INDEPENDIENTEMENTE DE SU UBICACIÓN.
+                         
         **********************************************************************************************************************************
         *  0. SALIR.
         ************************************************************************************************************************
@@ -329,8 +347,6 @@ public class Recursos_11 {
         
         String menu="";
         do {
-            Scanner teclaStr = new Scanner(System.in, "UTF-8");
-            
             switch (opcion) {                
                 case "1" -> System.out.println(recurso_01);
                 case "2" -> System.out.println(recurso_02);
@@ -379,23 +395,16 @@ public class Recursos_11 {
                     System.out.println(recurso_15);
                 }
             }
-            try {
-                System.out.print("Seleccione una opción: ");
-                menu = teclaStr.nextLine();
-                switch (menu) {
-                   
+            try {                
+                menu = miTryRecursos();                
+                switch (menu) {                   
                     case "0" -> {}
                     default -> {
-                            meterEspacios(25);
-                            System.out.println("\n  ¡¡¡ LA OPCIÓN NO ES CORRECTA !!!");
-                            meterEspacios(15);
-                            esperar(1500);
+                            miDefault();
                             }
                 }
             }  catch (Exception e) {
-                System.out.println("Error: " + e.toString());
-                System.out.println("MENSAJE " + e.getMessage());
-                System.out.println("La Excepción es: " + e.getClass());
+                miError(e);
             }
         } while (!"0".equals(menu));   
     }

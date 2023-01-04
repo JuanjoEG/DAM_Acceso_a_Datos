@@ -29,7 +29,6 @@ public class Main {
         
         String menu="";
         do {
-            Scanner teclaStr = new Scanner(System.in, "UTF-8");
             meterEspacios(25);
             System.out.println("""                          
                                
@@ -59,9 +58,7 @@ public class Main {
                                
                                """);
             try {
-                System.out.print("Seleccione una opción: ");
-                menu = teclaStr.nextLine();
-                meterEspacios(25);
+                menu = miTry();
                 switch (menu) {
                     
                     case "1" -> Tema_01.T_01.main(args);
@@ -82,16 +79,11 @@ public class Main {
                     
                     case "0" -> {}
                     default -> {
-                            meterEspacios(25);
-                            System.out.println("\n  ¡¡¡ LA OPCIÓN NO ES CORRECTA !!!");
-                            meterEspacios(15);
-                            esperar(1500);
+                            miDefault();
                             }
                 }
             }  catch (Exception e) {
-                System.out.println("Error: " + e.toString());
-                System.out.println("MENSAJE " + e.getMessage());
-                System.out.println("La Excepción es: " + e.getClass());
+                miError(e);
             }
         } while (!"0".equals(menu));
     }    
@@ -99,7 +91,7 @@ public class Main {
         try {            
             Thread.sleep(segundos);
         } catch (Exception e) {
-            System.out.println(e);
+            miError(e);
         }
     }
     
@@ -115,16 +107,56 @@ public class Main {
         String menu;
         do {
             Scanner teclaStr = new Scanner(System.in, "UTF-8");
-            System.out.print("Escribe 0 y pulsa INTRO para continuar: ");
+            System.out.print("Seleccione la opción '0': ");
             menu = teclaStr.nextLine();
             meterEspacios(25);
             if (!"0".equals(menu)) {
-                meterEspacios(25);
-                System.out.println("\n  ¡¡¡ LA OPCIÓN NO ES CORRECTA !!!");
-                meterEspacios(15);
-                esperar(1500);
-                meterEspacios(25);
+                miDefault();
             }
         } while (!"0".equals(menu));
+    }
+    
+    public static void miDefault() {
+    
+        meterEspacios(25);
+        System.out.println("\n  ¡¡¡ LA OPCIÓN NO ES CORRECTA !!!");
+        meterEspacios(15);
+        esperar(1500);
+        meterEspacios(25);
+    }
+    
+    public static String miTry () {
+    
+        Scanner teclaStr = new Scanner(System.in, "UTF-8");
+        System.out.print("Seleccione una opción: ");
+        String menu = teclaStr.nextLine();
+        meterEspacios(25);
+        return menu;
+    }
+    
+    public static String miTryRecursos() {
+    
+        Scanner teclaStr = new Scanner(System.in, "UTF-8");
+        System.out.print("Seleccione la opción '0': ");
+        String menu = teclaStr.nextLine();
+        meterEspacios(25);
+        switch (menu) {
+            case "0" -> {}
+            default -> {                
+                miDefault();
+            }
+        }
+        return menu;
+    }
+    
+    public static void miError(Exception e) {
+    
+        System.out.println("\n* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\n");
+        System.out.println("Error: " + e.toString());
+        System.out.println("\n* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\n");
+        System.out.println("MENSAJE " + e.getMessage());
+        System.out.println("\n* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\n");
+        System.out.println("La Excepción es: " + e.getClass());
+        System.out.println("\n* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\n");
     }
 }

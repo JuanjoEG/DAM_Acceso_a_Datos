@@ -1,7 +1,6 @@
 package Tema_06;
 
 import static Principal_Main.Main.*;
-import java.util.Scanner;
 
 /**
  *
@@ -29,7 +28,6 @@ public class T_06 {
     public static void main(String[] args) {
         String menu="";
         do {
-            Scanner teclaStr = new Scanner(System.in, "UTF-8");
             meterEspacios(25);
             System.out.println("""                          
                                
@@ -64,25 +62,18 @@ public class T_06 {
                                
                                """);
             try {
-                System.out.print("Seleccione una opción: ");
-                menu = teclaStr.nextLine();
-                meterEspacios(25);
+                menu = miTry();
                 switch (menu) {
                     
                     case "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16" -> Recursos_06.recurso(menu);
                     
                     case "0" -> {}
                     default -> {
-                            meterEspacios(25);
-                            System.out.println("\n  ¡¡¡ LA OPCIÓN NO ES CORRECTA !!!");
-                            meterEspacios(15);
-                            esperar(1500);
+                            miDefault();
                             }
                 }
             }  catch (Exception e) {
-                System.out.println("Error: " + e.toString());
-                System.out.println("MENSAJE " + e.getMessage());
-                System.out.println("La Excepción es: " + e.getClass());
+                miError(e);
             }
         } while (!"0".equals(menu));
     }
