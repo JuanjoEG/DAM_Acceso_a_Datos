@@ -14,10 +14,10 @@ public class T_11 {
     public static String punto_04 ="*  PUNTO  4.  BENEFICIOS DE LAS BASES DE DATOS No-SQL I. REQUISITOS DE UNA SOLUCIÓN No-SQL A NIVEL EMPRESARIAL.\n";
     public static String punto_05 ="*  PUNTO  5.  BENEFICIOS DE LAS BASES DE DATOS No-SQL II.\n";
     public static String punto_06 ="*  PUNTO  6.  BENEFICIOS DE LAS BASES DE DATOS No-SQL III.\n";
-    public static String punto_07 ="*  PUNTO  7.\n";
-    public static String punto_08 ="*  PUNTO  8.\n";
-    public static String punto_09 ="*  PUNTO  9.\n";
-    public static String punto_10 ="*  PUNTO 10.\n";
+    public static String punto_07 ="*  PUNTO  7.  TIPOS DE BASES DE DATOS NoSQL.\n";
+    public static String punto_08 ="*  PUNTO  8.  MOTORES DE BASES DE DATOS No-SQL.\n";
+    public static String punto_09 ="*  PUNTO  9.  INTRODUCCIÓN A BIG DATA.\n";
+    public static String punto_10 ="*  PUNTO 10.  TIPOS DE BIG DATA.\n";
     public static String punto_11 ="*  PUNTO 11.\n";
     public static String punto_12 ="*  PUNTO 12.\n";
     public static String punto_13 ="*  PUNTO 13.\n";

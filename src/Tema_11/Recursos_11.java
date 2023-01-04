@@ -76,7 +76,7 @@ public class Recursos_11 {
                          
                 * EN UNA BASE DE DATOS RELACIONAL ESA INFORMACIÓN SE DIVIDE Y REPARTE EN DISTINTAS TABLAS.
                          
-                * EN UNA BASE DE DATOS NoSQL TODA LA INFORMACIÓN SE ALMACENA EN UN FICHERO JSON,
+                * EN UNA BASE DE DATOS NoSQL TODA LA INFORMACIÓN SE ALMACENA EN UN FICHERO BSON,
                   PUDIENDO ESTAR REPETIDA TODA LA INFORMACIÓN EN DISTINTOS PUNTOS
                   CON EL FIN DE ACCEDER A LA INFORMACIÓN LO MÁS RÁPIDO POSIBLE.
                          
@@ -219,6 +219,42 @@ public class Recursos_11 {
         """ + punto_06 + """
         **********************************************************************************************************************************
                        
+            SIN CAPA DE ALMACENAMIENTO EN CACHÉ SEPARADA:
+                    NO REQUIERE UNA CAPA DE ALMACENAMIENTO EN CACHÉ ESPECÍFICA.
+                    LAS CACHÉ DE TODOS LOS NODOS PUEDEN ALMACENAR DATOS PARA:
+                            - ENTRADA Y SALIDA RÁPIDA.
+                            - PARA UN ACCESO ENTRADA/SALIDA.
+                    ELIMINA EL PROBLEMA DE SINCRONIZAR LOS DATOS DE LA CACHÉ CON LA BASE DE DATOS PERSISTENTE.
+                            - LA CACHÉ SON MEMORIAS INTERMEDIAS, CON LAS CUALES TRABAJAMOS LOS USUARIOS
+                              QUE ESTAMOS ACCEDIENDO A LA BASE DE DATOS, PARA CONSEGUIR UN ACCESO MÁS RÁPIDO.
+                            - LA BASE DE DATOS PERSISTENTE ES DONDE SE PASA LA INFORMACIÓN
+                              UNA VEZ QUE LA INFORMACIÓN DE LA CACHÉ YA ESTÁ CONFIRMADA
+                              PARA GUARDARLA A LARGO PLAZO.
+                            - DE ESTA FORMA, ADMITE UNA ESCALABILIDAD SIMPLE
+                              CON MENOS PROBLEMAS DE ADMISIÓN, REDUNDANCIA, CONSISTENCIA, ETC...
+                         
+            LISTA EN LA NUBE:
+                    DADO QUE LA ADAPTACIÓN DE LA INFRAESTRUCTURA DE LA NUBE AUMENTA DÍA A DÍA,
+                    UNA SOLUCIÓN No-SQL DE NIVEL EMPRESARIAL DEBE ESTAR PREPARADA PARA LA NUBE,
+                    CUMPLIENDO VARIAS CONDICIONES:
+                            - PODER FUNCIONAR EN UNA CONFIGURACIÓN DE LA NUBE
+                              COMO AMAZON EC2, GOOGLE CLOUD, MICROSOFT AZURE, ETC...
+                            - PODER EXTENDER Y REDUCIR UN CLÚSTER CUANDO SEA NECESARIO.
+                            - ADMITIR UNA SOLUCIÓN HÍBRIDA EN LA QUE PARTE DE LA BASE DE DATOS
+                              SE ALOJE DENTRO DE LAS INSTALACIONES DE LA EMPRESA Y OTRA PARTE SE ALOJE EN LA NUBE.
+                         
+            ALTO RENDIMIENTO CON ESCALABILIDAD LINEAL:
+                    NORMALMENTE, EL RENDIMIENTO DE OTROS SISTEMAS DE BASES DE DATOS, PUEDE DISMINUIR CUANDO SE AÑADEN MÁS NODOS.
+                    UNA BUENA SOLUCIÓN No-SQL AUMENTA EL RENDIMIENTO DE LAS OPERACIONES DE LECTURA CUANDO SE AGREGAN NODOS ADICIONALES.
+                            - UNA BASE DE DATOS DE ESTE TIPO PUEDE MEJORAR EL RENDIMIENTO AGREGANDO NODOS A UN CLÚSTER.
+                            - ESTAS GANANCIAS DE RENDIMIENTO SON DE NATURALEZA LINEAL.
+                         
+            OTROS BENEFICIOS:
+                    - SOPORTE DE ESQUEMA FLEXIBLE.
+                    - ADMITE LENGUAJES Y PLATAFORMAS CLAVE PARA DESARROLLADORES.
+                    - FÁCIL DE IMPLEMENTAR, MANTENER Y EXTENDER,
+                    - COMUNIDAD DE CÓDIGO ABIERTO.
+                         
         **********************************************************************************************************************************
         *  0. SALIR.
         ************************************************************************************************************************
@@ -232,6 +268,30 @@ public class Recursos_11 {
         """ + punto_07 + """
         **********************************************************************************************************************************
                        
+            BASES DE DATOS CLAVE/VALOR:
+                    - REALMENTE SON UNA TABLA 'HASH' DE CLAVES Y VALORES.
+                    - EJEMPLOS:  --> RIAK, TOKYO CABINET, SERVIDOR REDIS, MEMCACHED Y SCALARIS.
+                         
+            BASES DE DATOS BASADAS EN DOCUMENTOS:
+                    - ALMACENA DOCUMENTOS COMPUESTOS POR ELEMENTOS ETIQUETADOS.
+                    - EJEMPLOS:  --> MONGODB, COUCHDB, ORIENTDB Y RAVENDB.
+                         
+            BASES DE DATOS BASADAS EN COLUMNAS:
+                    - CADA BLOQUE DE ALMACENAMIENTO CONTIENE DATOS DE UNA SOLA COLUMNA.
+                    - EJEMPLOS:  --> BIBTABLE, CASSANDRA, HBASE E HYPERTABLE.
+                         
+            BASES DE DATOS BASADAS EN GRÁFICOS:
+                    - UNA BASE DE DATOS BASADA EN GRÁFICOS ES UNA BASE DE DATOS DE RED
+                      QUE UTILIZA NODOS PARA REPRESENTAR Y ALMACENAR DATOS.
+                    - EJEMPLOS:  --> NEO4J, INFOGRID, INFINITE GRAPH Y FLOCKDB.
+                         
+                         
+            LA VARIEDAD DE OPCIONES EN LA NUBE DE BASES DE DATOS No-SQL TIENE SUS PROPIAS:
+                    - VENTAJAS:
+                            PERMITEN ELEGIR UN DISEÑO DE ACUERDO A LOS REQUISITOS DE SU SISTEMA.
+                    - INCONVENIENTES:
+                            AÚN AJUSTANDO EL PRODUCTO A LOS RECURSOS DEL SISTEMA NO SIEMPRE FUNCIONARÁ CORRECTAMENTE.
+                         
         **********************************************************************************************************************************
         *  0. SALIR.
         ************************************************************************************************************************
@@ -245,6 +305,32 @@ public class Recursos_11 {
         """ + punto_08 + """
         **********************************************************************************************************************************
                        
+            SON BASES DE DATOS QUE PRIORIZAN EL ACCESO RÁPIDO A LA INFORMACIÓN
+            POR ENCIMA DE LA INTEGRIDAD DE LOS DATOS.
+                         
+                AZURE COSMOS DB:
+                        MULTI-MODELO, DE DISTRIBUCIÓN GLOBAL Y ESCALADO HORIZONTAL.
+                        DESARROLLADA POR MICROSOFT.
+                         
+                MONGODB:
+                        ORIENTADA A LA DOCUMENTACIÓN.
+                        SUS DATOS SON ALMACENADOS EN BSON, QUE ES UNA REPRESENTACIÓN BINARIA DE JSON.
+                         
+                ARANGODB:
+                        UTILIZA SU LENGUAJE LLAMADO AQL
+                        Y ESTO LE PERMITE CREAR ESTRUCTURAS DE TIPO CLAVE/VALOR, RELACIONALES Y GRAFOS.
+                        
+                GOOGLE CLOUD FIRESTORE:
+                        DE USO EN LA NUBE.
+                        PERMITE TRANSACCIONES ACID Y POSEE SOPORTE SIN CONEXIÓN.
+                         
+                REDIS:
+                        SU POPULARIDAD SE DEBE A SU ALMACENAMIENTO DE DATOS EN MEMORIA RAM.
+                         
+                AMAZON DYNAMODB:
+                        SU SERVICIO ES 100% 'SERVER-LESS'.
+                        PROVEE ESCALABILIDAD AUTOMÁTICA Y PERMITE TRANSACCIONES SEGURAS.
+                         
         **********************************************************************************************************************************
         *  0. SALIR.
         ************************************************************************************************************************
@@ -258,6 +344,26 @@ public class Recursos_11 {
         """ + punto_09 + """
         **********************************************************************************************************************************
                        
+            PRIMERO DEFINIREMOS QUÉ SON LOS DATOS (DATA):
+                CARACTERES O SÍMBOLOS CON LOS QUE SE REALIZAN OPERACIONES MEDIANTE UNA MÁQUINA.
+                    - PUEDEN ALMACENARSE Y TRANSMITIRSE EN FORMA DE SEÑALES ELÉCTRICAS.
+                    - SE REGISTRAN EN SOPORTES DE ALMACENAMIENTO MAGNÉTICOS, ÓPTICOS O MECÁNICOS.
+                         
+            * BIG DATA:
+                SON DATOS QUE POSEEN LA CARACTERÍSTICA 'ESPECIAL' --> QUE SU TAMAÑO ES MUY GRANDE.
+                    - ES UNA COLECCIÓN DE DATOS 'GIGANTE' Y, QUE CRECE CADA VEZ MÁS CON EL TIEMPO.
+                    - MANEJA DATOS TAN GRANDES Y TAN TEDIOSOS DE ADMINISTRAR QUE NO SE PODÍA MANEJAR CON LAS HERRAMIENTAS QUE HABÍA.
+                         
+            - CARACTERÍSTICAS DIFERENCIALES:
+                QUE PRESENTAN DESAFÍOS IMPORTANTES A LA HORA DE DISEÑAR SOLUCIONES.
+                    - ESCALABILIDAD A GRAN VOLUMEN.
+                    - RAPIDEZ DE MOVER INFORMACIÓN Y DE PROCESARLA.
+                    - PROPIEDADES DE ALGUNOS DE LOS DATOS QUE SE TRATARÁN EN EL PROCESO.
+                         
+            - OBJETIVO:
+                    SACAR A LA LUZ CONOCIMIENTOS Y CONEXIONES DE GRANDES VOLÚMENES DE DATOS HETEROGÉNEOS
+                    QUE NO SERÍAN POSIBLES CON MÉTODOS CONVENCIONALES.
+                         
         **********************************************************************************************************************************
         *  0. SALIR.
         ************************************************************************************************************************
@@ -271,6 +377,51 @@ public class Recursos_11 {
         """ + punto_10 + """
         **********************************************************************************************************************************
                        
+            ESTRUCTURADO:
+                         
+                    DATOS ESTRUCTURADOS:
+                            TODA AQUELLA INFORMACIÓN QUE PUEDA SER ALMACENADA, Y SEA ACCESIBLE DE FORMA FIJA.
+                         
+                    CON EL PASO DEL TIEMPO, LOS SISTEMAS DE ALMACENAMIENTO HAN SIDO MEJORADOS
+                    CON DISTINTAS TÉCNICAS QUE MEJORAN EL TRABAJO CON ESTE TIPO DE DATOS ESTRUCTURADOS.
+                            - ACTUALMENTE EXISTE EL PROBLEMA DEL CRECIMIENTO DE LOS DATOS: CON TAMAÑO ZETTABYTES.
+                         
+                            1 ZETTABYTE.    --> MIL EXABYTES.                                     10 ELEVADO A  3   EXABYTES.
+                                            --> 1 MILLÓN DE PETABYTES.                            10 ELEVADO A  6  PETABYTES.
+                                            --> 1 BILLÓN DE TERABYTES.                            10 ELEVADO A  9  TERABYTES.
+                                            --> MIL BILLONES DE GIGABYTES.                        10 ELEVADO A 12  GIGABYTES.
+                                            --> 1 MILLÓN DE BILLONES DE MEGABYTES.                10 ELEVADO A 15  MEGABYTES.
+                                            --> 1 BILLÓN DE BILLONES DE KILOBYTE.                 10 ELEVADO A 18  KILOBYTES.
+                                            --> MIL BILLONES DE BILLONES DE BYTES.                10 ELEVADO A 21      BYTES.
+                                            --> 8 MIL BILLONES DE BILLONES DE BYTS.           8 * 10 ELEVADO A 21       BYTS.
+                         
+                    VIENDO ESTAS CIFRAS PODEMOS ENTENDER FÁCILMENTE POR QUÉ SE LE DA EL NOMBRE DE BIG DATA.
+                         
+                         
+            NO ESTRUCTURADOS:
+                         
+                    CUALQUIER DATO CUYA FORMA O ESTRUCTURA SEA DESCONOCIDA, SE CLASIFICARÁ COMO DATOS NO ESTRUCTURADOS.
+                         
+                    HOY EN DÍA MUCHAS COMPAÑÍAS DISPONEN DE SISTEMAS NO ESTRUCTURADOS DONDE MEZCLAN COLECCIONES
+                    QUE CONTIENEN IMÁGENES DE TEXTO, NÚMEROS, DIRECCIONES, FICHEROS MULTIMEDIA DE IMAGEN Y SONIDO, ETC...
+                         
+                    ADEMÁS DEL PROBLEMA DEL TAMAÑO DE LOS DATOS,
+                    LOS DATOS NO ESTRUCTURADOS PLANTEAN OTRAS DIFICULTADES PARA SU PROCESAMIENTO.
+                         
+                    ESTO PUEDE SUPONER UN PROBLEMA REAL SI ESTOS DATOS NO SON PROCESADOS
+                    Y SI NO SE SABE SACAR PARTIDO DE ELLOS.
+                         
+                         
+            SEMI-ESTRUCTURADOS:
+                         
+                    TIENEN LA SIMILITUD DE SER EN PARTE, DATOS ESTRUCTURADOS, EN CUYO INTERIOR POSEEN DATOS NO ESTRUCTURADOS.
+                         
+                    LA REALIDAD ES QUE NO ESTÁN PLANTEADOS PARA SER PLENAMENTE ESTRUCTURADOS COMO UNA TABLA.
+                         
+                    UN EJEMPLO SERÍA LOS DATOS REPRESENTADOS COMO EN EL FORMATO XML O JSON.
+                    SON FICHEROS DE DATOS ESTRUCTURADOS PERO ...
+                    DENTRO PUEDEN CONTENER ENLACES A INFORMACIÓN NO ESTRUCTURADA.
+                         
         **********************************************************************************************************************************
         *  0. SALIR.
         ************************************************************************************************************************
