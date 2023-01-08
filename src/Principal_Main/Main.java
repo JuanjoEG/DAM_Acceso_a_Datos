@@ -8,7 +8,9 @@ import java.util.Scanner;
  */
 public class Main {
 
+    public static String curso ="*  TÉCNICO EN DESARROLLO DE APLICACIONES MULTIPLATAFORMA.\n";
     public static String asignatura ="*  ACCESO A DATOS\n";
+    
     public static String tema_01 ="*  TEMA  1.  INTRODUCCIÓN AL MANEJO DE FICHEROS.\n";
     public static String tema_02 ="*  TEMA  2.  FLUJOS.\n";
     public static String tema_03 ="*  TEMA  3.  TRABAJOS CON FICHEROS XML.\n";
@@ -31,7 +33,9 @@ public class Main {
         do {
             meterEspacios(25);
             System.out.println("""                          
-                               
+        
+        *******************************************************************
+        """ + curso + """
         *******************************************************************
         """ + asignatura + """
         *******************************************************************
