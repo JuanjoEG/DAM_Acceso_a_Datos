@@ -18,12 +18,7 @@ public class T_11 {
     public static String punto_08 ="*  PUNTO  8.  MOTORES DE BASES DE DATOS No-SQL.\n";
     public static String punto_09 ="*  PUNTO  9.  INTRODUCCIÓN A BIG DATA.\n";
     public static String punto_10 ="*  PUNTO 10.  TIPOS DE BIG DATA.\n";
-    public static String punto_11 ="*  PUNTO 11.\n";
-    public static String punto_12 ="*  PUNTO 12.\n";
-    public static String punto_13 ="*  PUNTO 13.\n";
-    public static String punto_14 ="*  PUNTO 14.\n";
-    public static String punto_15 ="*  PUNTO 15.\n";
-    public static String punto_16 ="*  PUNTO 16.  T O D O.\n";
+    public static String punto_11 ="*  PUNTO 11.  T O D O.\n";
     
     public static void main(String[] args)  {
         
@@ -48,13 +43,8 @@ public class T_11 {
         """ + punto_08 + """
         """ + punto_09 + """                        
         """ + punto_10 + """
-        """ + punto_11 + """
-        """ + punto_12 + """                        
-        """ + punto_13 + """
-        """ + punto_14 + """                        
-        """ + punto_15 + """
         *
-        """ + punto_16 + """
+        """ + punto_11 + """
         *
         *******************************************************************************************
         *  0. SALIR.
@@ -66,7 +56,7 @@ public class T_11 {
                 menu = miTry();
                 switch (menu) {
                     
-                    case "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16" -> Recursos_11.recurso(menu); 
+                    case "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11" -> Recursos_11.recurso(menu); 
                     
                     case "0" -> {}
                     default -> {

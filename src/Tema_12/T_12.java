@@ -8,21 +8,21 @@ import static Principal_Main.Main.*;
  */
 public class T_12 {
     
-    public static String punto_01 ="*  PUNTO  1.\n";
-    public static String punto_02 ="*  PUNTO  2.\n";
-    public static String punto_03 ="*  PUNTO  3.\n";
-    public static String punto_04 ="*  PUNTO  4.\n";
-    public static String punto_05 ="*  PUNTO  5.\n";
-    public static String punto_06 ="*  PUNTO  6.\n";
-    public static String punto_07 ="*  PUNTO  7.\n";
-    public static String punto_08 ="*  PUNTO  8.\n";
-    public static String punto_09 ="*  PUNTO  9.\n";
-    public static String punto_10 ="*  PUNTO 10.\n";
-    public static String punto_11 ="*  PUNTO 11.\n";
-    public static String punto_12 ="*  PUNTO 12.\n";
-    public static String punto_13 ="*  PUNTO 13.\n";
-    public static String punto_14 ="*  PUNTO 14.\n";
-    public static String punto_15 ="*  PUNTO 15.\n";
+    public static String punto_01 ="*  PUNTO  1.  BASE DE DATOS MONGODB. CARACTERÍSTICAS I.\n";
+    public static String punto_02 ="*  PUNTO  2.  BASE DE DATOS MONGODB. CARACTERÍSTICAS II.\n";
+    public static String punto_03 ="*  PUNTO  3.  EL TEOREMA DE CAP.\n";
+    public static String punto_04 ="*  PUNTO  4.  CLASIFICACIÓN DE LAS BASES DE DATOS SEGÚN EL TEOREMA DE CAP.\n";
+    public static String punto_05 ="*  PUNTO  5.  BASE DE DATOS MONGODB. CASOS DE USO.\n";
+    public static String punto_06 ="*  PUNTO  6.  BASE DE DATOS MONGODB. TÉRMINOS EQUIVALENTES.\n";
+    public static String punto_07 ="*  PUNTO  7.  CARACTERÍSTICAS DEL CONCEPTO DE DOCUMENTO EN MONGODB.\n";
+    public static String punto_08 ="*  PUNTO  8.  FICHEROS BINARIOS DE MONGODB.\n";
+    public static String punto_09 ="*  PUNTO  9.  HERRAMIENTAS EXPORTACIÓN / IMPORTACIÓN.\n";
+    public static String punto_10 ="*  PUNTO 10.  UTILIDADES DE ANÁLISIS DE PERFORMANCE Y ACTIVIDAD.\n";
+    public static String punto_11 ="*  PUNTO 11.  SHELL DE MONGODB.\n";
+    public static String punto_12 ="*  PUNTO 12.  COMANDOS ÚTILES DE LA SHELL DE MONGO.\n";
+    public static String punto_13 ="*  PUNTO 13.  PROCESO DE CREACIÓN DE UNA BASE DE DATOS MONGODB EN LA NUBE.\n";
+    public static String punto_14 ="*  PUNTO 14.  OTRAS HERRAMIENTAS GRÁFICAS DE MONGODB. ROBOMONGO.\n";
+    public static String punto_15 ="*  PUNTO 15.  OPERACIONES CRUD.\n";
     public static String punto_16 ="*  PUNTO 16.  T O D O.\n";
     
     public static void main(String[] args)  {
