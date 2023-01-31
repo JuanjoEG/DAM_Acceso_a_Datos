@@ -8,22 +8,23 @@ import static Principal_Main.Main.*;
  */
 public class T_14 {
     
-    public static String punto_01 ="*  PUNTO  1.\n";
-    public static String punto_02 ="*  PUNTO  2.\n";
-    public static String punto_03 ="*  PUNTO  3.\n";
-    public static String punto_04 ="*  PUNTO  4.\n";
-    public static String punto_05 ="*  PUNTO  5.\n";
-    public static String punto_06 ="*  PUNTO  6.\n";
-    public static String punto_07 ="*  PUNTO  7.\n";
-    public static String punto_08 ="*  PUNTO  8.\n";
-    public static String punto_09 ="*  PUNTO  9.\n";
-    public static String punto_10 ="*  PUNTO 10.\n";
-    public static String punto_11 ="*  PUNTO 11.\n";
-    public static String punto_12 ="*  PUNTO 12.\n";
-    public static String punto_13 ="*  PUNTO 13.\n";
-    public static String punto_14 ="*  PUNTO 14.\n";
-    public static String punto_15 ="*  PUNTO 15.\n";
-    public static String punto_16 ="*  PUNTO 16.  T O D O.\n";
+    public static String punto_01 ="*  PUNTO  1.  BASES DE DATOS XML I.\n";
+    public static String punto_02 ="*  PUNTO  2.  BASES DE DATOS XML II.\n";
+    public static String punto_03 ="*  PUNTO  3.  VENTAJAS Y DESVENTAJAS DE LAS BASES DE DATOS XML.\n";
+    public static String punto_04 ="*  PUNTO  4.  GESTORES XML LIBRES Y COMERCIALES I.\n";
+    public static String punto_05 ="*  PUNTO  5.  GESTORES XML LIBRES Y COMERCIALES II.\n";
+    public static String punto_06 ="*  PUNTO  6.  INSTALACIÓN Y CONFIGURACIÓN DE EXIST DB.\n";
+    public static String punto_07 ="*  PUNTO  7.  EL PAQUETE DE INSTALACIÓN.\n";
+    public static String punto_08 ="*  PUNTO  8.  ESTRATEGIAS DE ALMACENAMIENTO.\n";
+    public static String punto_09 ="*  PUNTO  9.  ESTABLECIMIENTO Y CIERRE DE CONEXIONES I.\n";
+    public static String punto_10 ="*  PUNTO 10.  ESTABLECIMIENTO Y CIERRE DE CONEXIONES II.\n";
+    public static String punto_11 ="*  PUNTO 11.  AGREGAR, MODIFICAR Y ELIMINAR RECURSOS.\n";
+    public static String punto_12 ="*  PUNTO 12.  CREACIÓN Y BORRADO DE COLECCIONES.\n";
+    public static String punto_13 ="*  PUNTO 13.  MODIFICACIÓN DE CONTENIDOS XML.\n";
+    public static String punto_14 ="*  PUNTO 14.  TRANSACCIONES XML.\n";
+    public static String punto_15 ="*  PUNTO 15.  TRATAMIENTO EXCEPCIONES.\n";
+    public static String punto_16 ="*  PUNTO 16.  OTRA FORMA DE APRENDER XQUERY EN EXISTDB.\n";
+    public static String punto_17 ="*  PUNTO 17.  T O D O.\n";
     
     public static void main(String[] args)  {
         
