@@ -14,7 +14,7 @@ public class LecturaAleatoriaDeSecuenciaDeBytes2 {
         
         char caracter;
         RandomAccessFile file;                                     // ESTA CLASE TIENE EL CIERRE AUTOMÁTICO DEL FLUJO.
-        String ruta = "J:\\Ejercicios\\salida4.txt";
+        String ruta = "E:\\TRABAJO\\Ejercicios\\salida4.txt";
         int inicioPuntero = 8;
         int size = 9;
         byte[] arrayBytes = new byte[size+inicioPuntero];        // CREAMOS UN ARRAY DE TAMAÑO SUFICIENTE PARA GUARDAR LA LECTURA DEL FICHERO.

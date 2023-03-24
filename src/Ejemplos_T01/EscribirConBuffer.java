@@ -17,7 +17,7 @@ public class EscribirConBuffer {
             int bufferSize = 8;                                        // TAMAÑO DEL BUFFER
             
             String cadena = "Esto es una prueba de escritura";
-            String ruta = "J:\\Ejercicios\\salida5.txt";
+            String ruta = "E:\\TRABAJO\\Ejercicios\\salida5.txt";
             
             byte[] arrayBytes = cadena.getBytes();                      // LA CADENA SE CONVIERTE EN UN ARRAY DE BYTES.
 

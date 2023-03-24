@@ -15,7 +15,7 @@ public class LecturaSecuencialCaracter {
         
         int unByte = 0;
         String contenido = "";
-        String ruta = "J:\\Ejercicios\\salida2.txt";
+        String ruta = "E:\\TRABAJO\\Ejercicios\\salida2.txt";
         Reader file;
         
         try {

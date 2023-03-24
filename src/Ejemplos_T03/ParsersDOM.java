@@ -19,7 +19,7 @@ public class ParsersDOM {
     
     public static void main(String[] args) {
         
-        String ruta = "J:\\Ejercicios\\Books.xml";
+        String ruta = "E:\\TRABAJO\\Ejercicios\\Books.xml";
         //String ruta = "J:\\Ejercicios\\inputxml.txt";
         
         try {

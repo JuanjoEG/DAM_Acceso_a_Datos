@@ -13,8 +13,8 @@ public class MoverFichero {
     public static void main(String[] args) {
         
         try {    
-            File fileOrig = new File ("J:\\Ejercicios\\salida.txt");
-            File fileDest = new File ("J:\\Ejercicios\\salida3.txt");
+            File fileOrig = new File ("E:\\TRABAJO\\Ejercicios\\salida.txt");
+            File fileDest = new File ("E:\\TRABAJO\\Ejercicios\\salida3.txt");
 
             if (fileOrig.renameTo(fileDest)) {
                 System.out.println("El Fichero se movió correctamente!");

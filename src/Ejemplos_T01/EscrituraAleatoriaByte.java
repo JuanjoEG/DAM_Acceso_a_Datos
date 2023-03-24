@@ -16,7 +16,7 @@ public class EscrituraAleatoriaByte {
         int unByte = 68;
         char caracter;
         RandomAccessFile file;                                     // ESTA CLASE TIENE EL CIERRE AUTOMÁTICO DEL FLUJO.
-        String ruta = "J:\\Ejercicios\\salida3.txt";
+        String ruta = "E:\\TRABAJO\\Ejercicios\\salida3.txt";
         
         try {
             

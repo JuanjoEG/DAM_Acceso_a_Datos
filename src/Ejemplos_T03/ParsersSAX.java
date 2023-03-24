@@ -20,7 +20,7 @@ public class ParsersSAX {
     
     public static void main(String[] args) {
         
-        String ruta = "J:\\Ejercicios\\Books.xml";
+        String ruta = "E:\\TRABAJO\\Ejercicios\\Books.xml";
         
         try {
         

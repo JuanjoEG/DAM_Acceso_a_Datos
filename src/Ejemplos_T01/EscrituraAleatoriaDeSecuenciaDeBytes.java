@@ -15,7 +15,7 @@ public class EscrituraAleatoriaDeSecuenciaDeBytes {
         
         try {
         
-            String ruta = "J:\\Ejercicios\\salida.txt";
+            String ruta = "E:\\TRABAJO\\Ejercicios\\salida.txt";
             String cadena = "Esto es una prueba de escritura";
             int inicioPuntero = 8;
             RandomAccessFile file;

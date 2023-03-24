@@ -16,7 +16,7 @@ public class LeerConBuffer {
             int bufferSize = 8;
             int unByte = 0;
             String contenido = "";
-            String ruta = "J:\\Ejercicios\\salida5.txt";
+            String ruta = "E:\\TRABAJO\\Ejercicios\\salida5.txt";
 
             BufferedInputStream file = new BufferedInputStream(new FileInputStream(ruta), bufferSize);            
 

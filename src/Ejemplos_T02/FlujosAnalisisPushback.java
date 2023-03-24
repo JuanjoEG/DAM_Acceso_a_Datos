@@ -15,7 +15,7 @@ public class FlujosAnalisisPushback {
         
         // VAMOS A LEER UN DATO CON ANTICIPACIÓN PARA SABER QUÉ SE APROXIMA.
         
-        String ruta = "J:\\Ejercicios\\salida5.txt";  // EL PRIMER CARACTER ES UNA "E".
+        String ruta = "E:\\TRABAJO\\Ejercicios\\salida5.txt";  // EL PRIMER CARACTER ES UNA "E".
         
         try {
             

@@ -13,7 +13,7 @@ public class EscrituraSecuencialCaracter {
     
     public static void main(String[] args)   {
         
-        String ruta = "J:\\Ejercicios\\salida2.txt";
+        String ruta = "E:\\TRABAJO\\Ejercicios\\salida2.txt";
         String cadena = "Esto es una prueba de escritura";
         Writer file;
         

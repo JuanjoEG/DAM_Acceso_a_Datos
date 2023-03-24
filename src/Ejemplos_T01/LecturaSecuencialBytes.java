@@ -15,7 +15,7 @@ public class LecturaSecuencialBytes {
         
         int unByte = 0;
         String contenido = "";
-        String ruta = "J:\\Ejercicios\\salida1.txt";
+        String ruta = "E:\\TRABAJO\\Ejercicios\\salida1.txt";
         InputStream file;
         
         try {

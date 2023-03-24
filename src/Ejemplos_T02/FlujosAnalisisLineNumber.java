@@ -12,7 +12,7 @@ public class FlujosAnalisisLineNumber {
     
     public static void main(String[] args) {
         
-        String ruta = "J:\\Ejercicios\\salida5.txt";
+        String ruta = "E:\\TRABAJO\\Ejercicios\\salida5.txt";
         try {
         
             FileReader fileReader = new FileReader(ruta);

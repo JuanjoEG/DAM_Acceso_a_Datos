@@ -13,7 +13,7 @@ public class FlujosAnalisisInformacionRead {
     
     public static void main(String[] args) {
         
-        String ruta = "J:\\Ejercicios\\salida65.data";
+        String ruta = "E:\\TRABAJO\\Ejercicios\\salida65.data";
         
         try {
         

@@ -13,7 +13,7 @@ public class EscrituraSecuencialBytes {
     
     public static void main(String[] args)   {
         
-        String ruta = "J:\\Ejercicios\\salida.txt";
+        String ruta = "E:\\TRABAJO\\Ejercicios\\salida.txt";
         String cadena = "Esto es una prueba de escritura";
         OutputStream file;
         
